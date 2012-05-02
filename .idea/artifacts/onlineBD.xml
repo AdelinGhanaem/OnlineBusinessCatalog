@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="onlineBD">
+    <output-path>$PROJECT_DIR$/war</output-path>
+    <root id="root">
+      <element id="gwt-compiler-output" facet="onlineBD/gwt/GWT" />
+      <element id="javaee-facet-resources" facet="onlineBD/web/Web" />
+    </root>
+  </artifact>
+</component>

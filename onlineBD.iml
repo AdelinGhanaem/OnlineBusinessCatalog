@@ -32,6 +32,41 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gwt-user" level="project" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/hamcrest-library-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/jmock-junit4-2.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/jmock-2.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/cglib-nodep-2.1_3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/hamcrest-library-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/jmock-junit4-2.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/jmock-2.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/cglib-2.1_3-src.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/workspace/3drPartyLibs/gwt-2.4.0/gwt-servlet-deps.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

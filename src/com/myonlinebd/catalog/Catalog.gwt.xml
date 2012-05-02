@@ -8,7 +8,9 @@
   <!-- Specify the app entry point class.                   -->
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
 
-
+  <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
+  <source path="shared"/>
+  <source path="client"/>
   <!-- Specify the app servlets.                   -->
   <servlet path='/CatalogService' class='com.myonlinebd.catalog.server.CatalogServiceImpl'/>
 
