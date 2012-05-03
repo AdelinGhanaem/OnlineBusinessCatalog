@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93c05d0c-fe48-4183-8e52-7f4e65147df0" name="Default" comment="" />
+    <list default="true" id="93c05d0c-fe48-4183-8e52-7f4e65147df0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountLocator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/InMemoryAccountRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/MyServicesLocator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountLocatorTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/CatalogService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/CatalogServiceAsync.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/CatalogServiceImpl.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Account.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/domain/Account.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Response.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/domain/Response.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/AccountContext.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/AccountContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/BusinessCardsRequestFactory.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/BusinessCardsRequestFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountRepository.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountService.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/ResponseFactory.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/ResponseFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/AccountProxy.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/AccountProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java" afterPath="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountServiceImplTest.java" afterPath="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+    </list>
     <ignored path="onlineBD.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,6 +34,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/onlineBD$AccountLocatorTest_and_1_more.ic" NAME="AccountLocatorTest and 1 more Coverage Results" MODIFIED="1336051328210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -57,17 +83,7 @@
     <favorites_list name="onlineBD" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AccountServiceImplTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountServiceImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="6" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.35315984">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -85,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/AccountContext.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/Catalog.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountRepository.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Reponse.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/presenter/AccountCreatorPresenterImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/presenter/AccountCreatorPresenter.java" />
-        <option value="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java" />
         <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Response.java" />
-        <option value="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/ResponseFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/MyServicesLocator.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/BusinessCardsRequestFactory.java" />
+        <option value="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/AccountContext.java" />
+        <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountRepository.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/InMemoryAccountRepository.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/AccountProxy.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Account.java" />
+        <option value="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountLocatorTest.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/domain/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountLocator.java" />
         <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountServiceImplTest.java" />
       </list>
     </option>
   </component>
@@ -136,6 +152,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,6 +169,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="onlineBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlineBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlineBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlineBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlineBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,15 +283,9 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,9 +305,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -271,8 +315,8 @@
       <recent name="com.myonlinebd.catalog.client.presenter" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.myonlinebd.catalog.server.model" />
       <recent name="com.myonlinebd.catalog.server" />
+      <recent name="com.myonlinebd.catalog.server.model" />
       <recent name="com.myonlinebd.catalog.client.presenter" />
       <recent name="com.myonlinebd.catalog.client.proxies" />
       <recent name="com.myonlinebd.catalog.client.view" />
@@ -282,8 +326,8 @@
       <recent name="com.myonlinebd.catalog.client.presenter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountServiceImplTest">
-    <configuration default="false" name="AccountServiceImplTest.invalidEmailIsNotAllowedAndShouldReturnErrorResponse" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.AccountLocatorTest and 1 more">
+    <configuration default="false" name="AccountLocatorTest.shouldReturnNUllWhenAccountIsNotFound" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
@@ -294,8 +338,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
-      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountServiceImplTest" />
-      <option name="METHOD_NAME" value="invalidEmailIsNotAllowedAndShouldReturnErrorResponse" />
+      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountLocatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnNUllWhenAccountIsNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -311,7 +355,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="AccountServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="AccountLocatorTest.shouldReturnAccountTypeClass" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
@@ -322,9 +366,88 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
-      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountServiceImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountLocatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnAccountTypeClass" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountLocatorTest.shouldReturnAccountIdCorrectly" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="onlineBD" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
+      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountLocatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnAccountIdCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountLocatorTest.shouldReturnIdTypeCorrectly" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="onlineBD" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
+      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountLocatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnIdTypeCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountLocatorTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="onlineBD" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="pattern" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -334,93 +457,12 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AccountServiceImplTest.anotherInvalidEmailIsNotAllowed" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="onlineBD" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
-      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountServiceImplTest" />
-      <option name="METHOD_NAME" value="anotherInvalidEmailIsNotAllowed" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AccountServiceImplTest.shortPasswordIsNotAllowed" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="onlineBD" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
-      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountServiceImplTest" />
-      <option name="METHOD_NAME" value="shortPasswordIsNotAllowed" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AccountServiceImplTest.shouldReturnAccountWhenAccountExists" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.myonlinebd.catalog.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="onlineBD" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.myonlinebd.catalog.server" />
-      <option name="MAIN_CLASS_NAME" value="com.myonlinebd.catalog.server.AccountServiceImplTest" />
-      <option name="METHOD_NAME" value="shouldReturnAccountWhenAccountExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <patterns>
+        <pattern testClass="com.myonlinebd.catalog.server.AccountLocatorTest" />
+        <pattern testClass="com.myonlinebd.catalog.server.AccountServiceImplTest" />
+      </patterns>
+      <RunnerSettings RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Cover" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -447,6 +489,24 @@
       </method>
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/usr/bin/flashplayerdebugger" port="0" run_mode="HtmlOrSwfFile" run_trusted="true" scope="Class" socket_policy_port="0" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -487,24 +547,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -518,15 +560,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -560,6 +593,15 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="false" name="Catalog" type="GWT.ConfigurationType" factoryName="GWT Configuration">
       <module name="onlineBD" />
       <option name="RUN_PAGE" value="Catalog.html" />
@@ -567,11 +609,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="GWT Configuration.Catalog" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.invalidEmailIsNotAllowedAndShouldReturnErrorResponse" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.anotherInvalidEmailIsNotAllowed" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.shortPasswordIsNotAllowed" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.shouldReturnAccountWhenAccountExists" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest.shouldReturnNUllWhenAccountIsNotFound" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest.shouldReturnAccountTypeClass" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest.shouldReturnAccountIdCorrectly" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest.shouldReturnIdTypeCorrectly" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest and 1 more" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -608,12 +650,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="24" width="1696" height="1010" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="24" width="1696" height="1010" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.424821" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="22" y="229" width="1631" height="601" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7410501" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5474795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -627,14 +670,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24954017" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329859" sideWeight="0.87747955" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39852852" sideWeight="0.75495917" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23525798" sideWeight="0.575179" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41769043" sideWeight="0.72076374" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2792363" sideWeight="0.76781327" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17596567" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32906976" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.74208677" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -696,84 +738,127 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountCreatorView.java">
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/MyServicesLocator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="124" selection-end="124" vertical-scroll-proportion="0.09293681" />
+        <state line="23" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/Catalog.java">
+    <entry file="jar:///usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/rt.jar!/java/lang/Class.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="4" selection-start="290" selection-end="290" vertical-scroll-proportion="0.29739776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="539" selection-end="539" vertical-scroll-proportion="0.20446096" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/CatalogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="167" selection-end="167" vertical-scroll-proportion="0.07434944" />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/rt.jar!/java/util/regex/Matcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="44" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/AccountContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="422" selection-end="422" vertical-scroll-proportion="0.20446096" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/presenter/AccountCreatorPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="277" selection-end="277" vertical-scroll-proportion="0.24635036" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/presenter/AccountCreatorPresenterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="805" selection-end="809" vertical-scroll-proportion="0.520073" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="231" selection-end="231" vertical-scroll-proportion="0.18587361" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/ResponseFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="171" selection-end="171" vertical-scroll-proportion="0.13011153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="23" selection-start="266" selection-end="266" vertical-scroll-proportion="0.2416357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="751" selection-end="751" vertical-scroll-proportion="0.4832714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="40" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.47459728" />
+        <state line="135" column="42" selection-start="6227" selection-end="6227" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="190" selection-end="190" vertical-scroll-proportion="0.14869888" />
+        <state line="13" column="32" selection-start="334" selection-end="334" vertical-scroll-proportion="0.32906765">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/model/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="121" selection-end="121" vertical-scroll-proportion="0.09293681" />
+        <state line="10" column="8" selection-start="231" selection-end="231" vertical-scroll-proportion="0.2617801">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="386" selection-end="386" vertical-scroll-proportion="0.20446096">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/AccountProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="2" selection-start="371" selection-end="371" vertical-scroll-proportion="0.22304833">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/AccountContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="561" selection-end="561" vertical-scroll-proportion="0.16728625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/workspace/3drPartyLibs/gwt-2.4.0/gwt-user.jar!/com/google/web/bindery/requestfactory/shared/Locator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="23" selection-start="3384" selection-end="3384" vertical-scroll-proportion="1.4312267">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.464684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/InMemoryAccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="48" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.7620818">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#363#386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountLocatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2327" selection-end="2327" vertical-scroll-proportion="0.9070632">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/server/AccountServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="6" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.35315984">
+        <state line="18" column="13" selection-start="515" selection-end="515" vertical-scroll-proportion="0.16728625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/ResponseFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="277" selection-end="277" vertical-scroll-proportion="0.26022306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="3" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.85130113">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/AccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="37" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.7992565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/domain/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.09293681">
           <folding />
         </state>
       </provider>

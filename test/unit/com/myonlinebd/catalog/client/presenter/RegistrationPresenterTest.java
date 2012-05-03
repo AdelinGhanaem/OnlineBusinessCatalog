@@ -18,8 +18,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(JMock.class)
 public class RegistrationPresenterTest {
-  private Mockery context = new Mockery();
 
+  private Mockery context = new Mockery();
   private BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
   private AccountContext accountContext = context.mock(AccountContext.class);
   private AccountCreatorView view = context.mock(AccountCreatorView.class);

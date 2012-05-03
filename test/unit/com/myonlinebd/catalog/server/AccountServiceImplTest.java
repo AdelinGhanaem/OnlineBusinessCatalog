@@ -1,7 +1,7 @@
 package com.myonlinebd.catalog.server;
 
-import com.myonlinebd.catalog.server.model.Account;
-import com.myonlinebd.catalog.server.model.Response;
+import com.myonlinebd.catalog.server.domain.Account;
+import com.myonlinebd.catalog.server.domain.Response;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.integration.junit4.JMock;
@@ -21,7 +21,7 @@ public class AccountServiceImplTest {
 
   private AccountRepository accountRepository = context.mock(AccountRepository.class);
   private ResponseFactory responseFactory = context.mock(ResponseFactory.class);
-  private AccountServiceImpl accountService = new AccountServiceImpl(accountRepository, responseFactory);
+  private AccountService accountService = new AccountServiceImpl(accountRepository, responseFactory);
 
 
   @Test
@@ -84,10 +84,10 @@ public class AccountServiceImplTest {
   public void shouldReturnAccountWhenAccountExists() {
     final Account account = new Account(1l, "email@mail.com");
     context.checking(new Expectations() {{
-      oneOf(accountRepository).getAccount(1l);
+      oneOf(accountRepository).getAccountById(1l);
       will(returnValue(account));
     }});
-    Account returnedAccount = accountService.getAccount(1l);
+    Account returnedAccount = accountService.getAccountById(1l);
     assertThat(account.getId(), equalTo(returnedAccount.getId()));
     assertThat(account.getEmail(), equalTo(returnedAccount.getEmail()));
   }

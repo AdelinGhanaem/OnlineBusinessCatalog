@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.server.model;
+package com.myonlinebd.catalog.server.domain;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -7,6 +7,9 @@ public class Account {
 
   private Long id;
   private String email;
+
+  public Account() {
+  }
 
   public Account(Long id, String email) {
     this.id = id;
@@ -20,4 +23,5 @@ public class Account {
   public String getEmail() {
     return email;
   }
+
 }

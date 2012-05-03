@@ -12,6 +12,5 @@
   <source path="shared"/>
   <source path="client"/>
   <!-- Specify the app servlets.                   -->
-  <servlet path='/CatalogService' class='com.myonlinebd.catalog.server.CatalogServiceImpl'/>
 
 </module>

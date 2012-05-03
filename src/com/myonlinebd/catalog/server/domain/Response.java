@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.server.model;
+package com.myonlinebd.catalog.server.domain;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -6,7 +6,6 @@ package com.myonlinebd.catalog.server.model;
 public class Response {
 
 
-  private String getResponseMessage;
 
   private String responseMessage;
 
