@@ -1,7 +1,7 @@
 package com.myonlinebd.catalog.server;
 
-import com.myonlinebd.catalog.server.model.Account;
-import com.myonlinebd.catalog.server.model.Response;
+import com.myonlinebd.catalog.server.domain.Account;
+import com.myonlinebd.catalog.server.domain.Response;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,7 +40,10 @@ public class AccountServiceImpl implements AccountService {
     return matcher.matches();
   }
 
-  public Account getAccount(Long id) {
-    return repository.getAccount(id);
+  public Account getAccountById(Long  id) {
+    return repository.getAccountById(id);
   }
+
+
+  //TODO:Eliminate The if else .... !
 }

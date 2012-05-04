@@ -1,12 +1,14 @@
 package com.myonlinebd.catalog.server;
 
-import com.myonlinebd.catalog.server.model.Account;
+import com.myonlinebd.catalog.server.domain.Account;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
 public interface AccountRepository {
-  Account getAccount(long id);
+
+  Account getAccountById(Long email);
 
   void create(String accountEmail, String password);
+
 }
