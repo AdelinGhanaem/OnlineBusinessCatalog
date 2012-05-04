@@ -7,11 +7,16 @@
     <inherits name="com.google.gwt.uibinder.UiBinder"/>
   <!-- Specify the app entry point class.                   -->
 
+
     <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
 
     <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
-    <source path="shared"/>
-    <source path="client"/>
+
     <!-- Specify the app servlets.                   -->
+
+  <source path="shared"/>
+  <source path="client"/>
+  <!-- Specify the app servlets.                   -->
+
 
 </module>
