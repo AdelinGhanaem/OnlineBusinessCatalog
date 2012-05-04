@@ -91,4 +91,7 @@ public class RegistrationPresenterTest {
     accountCreatorPresenter.createAccount(validEmail, shortPassword, receiver);
   }
 
+
+
+
 }
