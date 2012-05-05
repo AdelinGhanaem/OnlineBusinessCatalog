@@ -3,7 +3,6 @@ out/
 *.class
 .idea/*
 .idea/
-onlineBD.iml
 *.jar
 *.war
 *.ear
