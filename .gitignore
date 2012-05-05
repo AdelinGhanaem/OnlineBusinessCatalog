@@ -3,7 +3,8 @@ out/
 *.class
 .idea/*
 .idea/
-# Package Files #
+
+
 *.jar
 *.war
 *.ear
