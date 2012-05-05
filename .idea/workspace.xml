@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93c05d0c-fe48-4183-8e52-7f4e65147df0" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\online_bussiness_catalog\onlineBD\src\com\myonlinebd\catalog\client\CatalogService.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\online_bussiness_catalog\onlineBD\src\com\myonlinebd\catalog\client\CatalogServiceAsync.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\online_bussiness_catalog\onlineBD\src\com\myonlinebd\catalog\server\CatalogServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\online_bussiness_catalog\onlineBD\src\com\myonlinebd\catalog\server\model\Account.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\online_bussiness_catalog\onlineBD\src\com\myonlinebd\catalog\server\model\Response.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/onlineBD.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/BusinessCardsRequestFactory.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/RequestFactory/BusinessCardsRequestFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/AccountProxy.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/AccountProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java" afterPath="$PROJECT_DIR$/src/com/myonlinebd/catalog/shared/ResponseProxy.java" />
     </list>
     <ignored path="onlineBD.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +74,7 @@
       <file leaf-file-name="AccountCreatorViewImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountCreatorViewImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="4" selection-start="1987" selection-end="1987" vertical-scroll-proportion="0.0">
+            <state line="74" column="38" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,19 +82,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Catalog.gwt.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Catalog.gwt.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="0.8034826">
+            <state line="19" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="12" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+            <state line="9" column="34" selection-start="65" selection-end="65" vertical-scroll-proportion="0.2670157">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="onlineBD.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/onlineBD.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,8 +150,8 @@
         <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountRegistrationViewImpl.java" />
         <option value="$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java" />
         <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountCreatorViewImpl.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -205,6 +207,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -417,7 +420,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -438,9 +440,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -634,6 +636,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -667,24 +687,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -698,26 +700,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -751,6 +733,26 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="false" name="Catalog" type="GWT.ConfigurationType" factoryName="GWT Configuration">
       <module name="onlineBD" />
       <option name="RUN_PAGE" value="Catalog.html" />
@@ -759,12 +761,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="GWT Configuration.Catalog" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.anotherInvalidEmailIsNotAllowed" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.shortPasswordIsNotAllowed" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.shouldReturnAccountWhenAccountExists" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.anotherInvalidEmailIsNotAllowed" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.shortPasswordIsNotAllowed" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AccountServiceImplTest.shouldReturnAccountWhenAccountExists" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AccountLocatorTest" />
+      <item index="5" class="java.lang.String" itemvalue="GWT Configuration.Catalog" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -814,7 +816,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24723926" sideWeight="0.24618992" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3090615" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22822087" sideWeight="0.3915592" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38305488" sideWeight="0.49018404" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24954017" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -828,6 +829,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.74208677" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3090615" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -891,39 +893,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/InMemoryAccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2723112">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/server/MyServicesLocator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.2723112">
-          <folding />
-        </state>
+        <state line="8" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.2723112" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/Catalog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="4" selection-start="668" selection-end="668" vertical-scroll-proportion="1.0793651">
-          <folding />
-        </state>
+        <state line="51" column="4" selection-start="668" selection-end="668" vertical-scroll-proportion="1.0793651" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountCreatorView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.23011844">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.23011844" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/Catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="817" selection-end="817" vertical-scroll-proportion="0.18761063">
-          <folding />
-        </state>
+        <state line="21" column="0" selection-start="817" selection-end="817" vertical-scroll-proportion="0.18761063" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/resources/img/bar_bg.png">
@@ -943,58 +930,53 @@
     </entry>
     <entry file="jar://E:/my_projects_libraries/java/gwt-2.4.0/gwt-2.4.0/gwt-user.jar!/com/google/gwt/uibinder/client/UiField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="43" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.54468805">
-          <folding />
-        </state>
+        <state line="37" column="43" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.54468805" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/presenter/AccountCreatorPresenterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="3" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.8279933">
-          <folding />
-        </state>
+        <state line="38" column="3" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.8279933" />
       </provider>
     </entry>
     <entry file="jar://E:/my_projects_libraries/java/gwt-2.4.0/gwt-2.4.0/gwt-user.jar!/com/google/gwt/uibinder/client/UiHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="18" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.43001688">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="0" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="33" column="18" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.43001688" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountCreatorView.ui.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="38" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/client/view/AccountCreatorViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="4" selection-start="1987" selection-end="1987" vertical-scroll-proportion="0.0">
+        <state line="74" column="38" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/com/myonlinebd/catalog/client/presenter/RegistrationPresenterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="0" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onlineBD.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/myonlinebd/catalog/Catalog.gwt.xml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="0.8034826">
+        <state line="9" column="34" selection-start="65" selection-end="65" vertical-scroll-proportion="0.2670157">
           <folding />
         </state>
       </provider>
