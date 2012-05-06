@@ -30,12 +30,14 @@ body, td, a, div, .p {
 }
 
 #main_bar {
+
     height: 72px;
     border: solid;
     background-image: url('resources/img/bar_bg.png');
 }
 
 .cleaner {
+
     clear: both;
 }
 

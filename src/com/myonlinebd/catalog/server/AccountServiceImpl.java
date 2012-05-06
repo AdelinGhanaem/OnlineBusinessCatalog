@@ -18,7 +18,6 @@ public class AccountServiceImpl implements AccountService {
   public AccountServiceImpl(AccountRepository accountRepository, ResponseFactory factory) {
     repository = accountRepository;
     responseFactory = factory;
-
   }
 
   public Response create(String email, String password) {

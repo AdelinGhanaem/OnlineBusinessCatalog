@@ -14,17 +14,17 @@ public class MyServicesLocator implements ServiceLocator {
     return new AccountServiceImpl(new InMemoryAccountRepository(), new ResponseFactory() {
       @Override
       public Response invalidEmail() {
-        return new Response("invalid email");
+        return new Response();
       }
 
       @Override
       public Response shortPassword() {
-        return new Response("short password");
+        return new Response();
       }
 
       @Override
       public Response accountCreated() {
-        return new Response("Every thing is OK !!");
+        return new Response();
       }
     });
   }

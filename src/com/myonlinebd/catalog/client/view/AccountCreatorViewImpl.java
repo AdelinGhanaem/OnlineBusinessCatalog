@@ -9,30 +9,22 @@ import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.*;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
-import com.myonlinebd.catalog.shared.ResponseProxy;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
 /**
  * author webmaster1803@gmail.com
  */
-@UiTemplate("AccountCreatorView.ui.xml")
+@UiTemplate("AccountCreatorViewImpl.ui.xml")
 public class AccountCreatorViewImpl extends Composite implements AccountCreatorView {
+
     private AccountCreatorPresenter presenter;
+
 
     interface AccountRegistrationBinder extends UiBinder<DecoratorPanel, AccountCreatorViewImpl> {
     }
 
     private Receiver<ResponseProxy> receiver;
 
-    public AccountCreatorViewImpl(Receiver<ResponseProxy> proxyReceiver) {
-        receiver = proxyReceiver;
-
-    }
-
-    private void setPresenter(AccountCreatorPresenter accountCreatorPresenter) {
-        presenter = accountCreatorPresenter;
-    }
-
-    private static AccountRegistrationBinder binder = GWT.create(AccountRegistrationBinder.class);
     @UiField
     TextBox email;
     @UiField
@@ -44,10 +36,19 @@ public class AccountCreatorViewImpl extends Composite implements AccountCreatorV
     @UiField
     Button submit;
 
+    private static AccountRegistrationBinder binder = GWT.create(AccountRegistrationBinder.class);
 
-    public AccountCreatorViewImpl() {
 
+    public AccountCreatorViewImpl(Receiver<ResponseProxy> proxyReceiver) {
+        initWidget(binder.createAndBindUi(this));
+        receiver = proxyReceiver;
     }
+
+     public void setPresenter(AccountCreatorPresenter accountCreatorPresenter) {
+        presenter = accountCreatorPresenter;
+    }
+
+
 
     @Override
     public void notifyOfInvalidEmail() {
@@ -60,6 +61,10 @@ public class AccountCreatorViewImpl extends Composite implements AccountCreatorV
         password_error.setText("password must be 8 char long or more !");
     }
 
+    public Widget asWidget() {
+        return this;
+    }
+
 
     @UiHandler("submit")
     public void onSubmit(ClickEvent event) {
@@ -67,8 +72,6 @@ public class AccountCreatorViewImpl extends Composite implements AccountCreatorV
             presenter.createAccount(email.getText(), password.getText(), receiver);
         }
     }
-
-
 
 
 }

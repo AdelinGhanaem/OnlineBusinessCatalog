@@ -17,7 +17,9 @@
         <webroots>
           <root url="file://$MODULE_DIR$/war" relative="/" />
         </webroots>
-        <sourceRoots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -40,7 +42,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/hamcrest-library-1.1.jar!/" />
@@ -57,7 +59,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://E:/my_projects_libraries/java/jmock-2.5.1-jars/jmock-2.5.1/cglib-nodep-2.1_3.jar!/" />
@@ -77,7 +79,15 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="gwt-user" level="project" />
-    <orderEntry type="library" name="gwt-user" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/workspace/3drPartyLibs/gwt-2.4.0/gwt-servlet-deps.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

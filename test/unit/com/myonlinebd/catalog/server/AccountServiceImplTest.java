@@ -39,7 +39,9 @@ public class AccountServiceImplTest {
   }
 
 
-  @Test
+
+
+    @Test
   public void invalidEmailIsNotAllowedAndShouldReturnErrorResponse() {
     final Response response = new Response("Invalid email !");
     final String invalidEmail = "invalidEmail";
@@ -91,7 +93,7 @@ public class AccountServiceImplTest {
     assertThat(account.getId(), equalTo(returnedAccount.getId()));
     assertThat(account.getEmail(), equalTo(returnedAccount.getEmail()));
   }
-
-  //TODO:eliminate the if else in the in Account service  !!
+//
+//  //TODO:eliminate the if else in the in Account service  !!
 
 }

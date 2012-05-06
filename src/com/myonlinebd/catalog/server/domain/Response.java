@@ -6,15 +6,22 @@ package com.myonlinebd.catalog.server.domain;
 public class Response {
 
 
+    private String responseMessage;
 
-  private String responseMessage;
+    public Response(String message) {
+        responseMessage = message;
+    }
 
-  public Response(String message) {
-    responseMessage = message;
+    public Response() {
 
-  }
+    }
 
-  public String getResponseMessage() {
-    return responseMessage;
-  }
+
+    public String getResponseMessage() {
+        return responseMessage;
+    }
+
+    public void setResponseMessage(String responseMessage) {
+        this.responseMessage = responseMessage;
+    }
 }

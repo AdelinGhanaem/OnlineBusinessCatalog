@@ -2,10 +2,9 @@ package com.myonlinebd.catalog.client.presenter;
 
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.google.web.bindery.requestfactory.shared.Request;
-import com.myonlinebd.catalog.client.RequestFactory.AccountContext;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
-import com.myonlinebd.catalog.shared.ResponseProxy;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.integration.junit4.JMock;
@@ -21,7 +20,7 @@ public class RegistrationPresenterTest {
 
   private Mockery context = new Mockery();
   private BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
-  private AccountContext accountContext = context.mock(AccountContext.class);
+  private BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
   private AccountCreatorView view = context.mock(AccountCreatorView.class);
   private final String password = "password";
   private final String validEmail = "validEmail@mail.com";

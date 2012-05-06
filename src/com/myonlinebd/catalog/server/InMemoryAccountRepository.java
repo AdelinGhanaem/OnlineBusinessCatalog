@@ -10,8 +10,6 @@ import java.util.Random;
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
 public class InMemoryAccountRepository implements AccountRepository {
-
-
   private Map<Long, InMemoryAccount> accountMap = new HashMap<Long, InMemoryAccount>();
 
   @Override
@@ -24,6 +22,7 @@ public class InMemoryAccountRepository implements AccountRepository {
   public void create(String accountEmail, String password) {
     Long selfGeneratingId = new Random().nextLong();
     accountMap.put(selfGeneratingId, new InMemoryAccount(selfGeneratingId, accountEmail, password));
+    System.out.println("OK ......................!!");
   }
 
 
@@ -50,6 +49,4 @@ public class InMemoryAccountRepository implements AccountRepository {
       return password;
     }
   }
-
-
 }
