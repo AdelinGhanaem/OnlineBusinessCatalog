@@ -5,7 +5,7 @@
       <configuration>
         <setting name="compilerMaxHeapSize" value="128" />
         <setting name="gwtScriptOutputStyle" value="DETAILED" />
-        <setting name="gwtSdkUrl" value="file://E:/my_projects_libraries/java/gwt-2.4.0/gwt-2.4.0" />
+        <setting name="gwtSdkUrl" value="file://$USER_HOME$/workspace/3drPartyLibs/gwt-2.4.0" />
         <setting name="webFacet" value="Web" />
       </configuration>
     </facet>
@@ -76,16 +76,8 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="gwt-user (2)" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://E:/my_projects_libraries/java/gwt-2.4.0/gwt-2.4.0/gwt-servlet-deps.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="gwt-user" level="project" />
+    <orderEntry type="library" name="gwt-user" level="project" />
   </component>
 </module>
 
