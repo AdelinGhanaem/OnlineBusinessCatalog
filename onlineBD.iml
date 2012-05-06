@@ -4,7 +4,7 @@
     <facet type="gwt" name="GWT">
       <configuration>
         <setting name="compilerMaxHeapSize" value="128" />
-        <setting name="gwtScriptOutputStyle" value="DETAILED" />
+        <setting name="gwtScriptOutputStyle" value="PRETTY" />
         <setting name="gwtSdkUrl" value="file://E:/my_projects_libraries/java/gwt-2.4.0/gwt-2.4.0" />
         <setting name="webFacet" value="Web" />
       </configuration>
@@ -17,7 +17,9 @@
         <webroots>
           <root url="file://$MODULE_DIR$/war" relative="/" />
         </webroots>
-        <sourceRoots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -40,7 +42,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/jmock-2.5.1/hamcrest-library-1.1.jar!/" />
@@ -57,7 +59,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://E:/my_projects_libraries/java/jmock-2.5.1-jars/jmock-2.5.1/cglib-nodep-2.1_3.jar!/" />
@@ -81,6 +83,42 @@
       <library>
         <CLASSES>
           <root url="jar://E:/my_projects_libraries/java/gwt-2.4.0/gwt-2.4.0/gwt-servlet-deps.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/my_projects_libraries/java/hibernate-validator-4.2.0.Final-dist/hibernate-validator-4.2.0.Final/hibernate-validator-4.2.0.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/my_projects_libraries/java/slf4j-1.6.4/slf4j-1.6.4/slf4j-log4j12-1.6.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/my_projects_libraries/java/slf4j-1.6.4/slf4j-1.6.4/slf4j-api-1.6.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/my_projects_libraries/java/apache-log4j-1.2.16/apache-log4j-1.2.16/log4j-1.2.16.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

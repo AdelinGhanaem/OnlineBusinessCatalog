@@ -1,7 +1,7 @@
 package com.myonlinebd.catalog.client.presenter;
 
 import com.google.web.bindery.requestfactory.shared.Receiver;
-import com.myonlinebd.catalog.shared.ResponseProxy;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com

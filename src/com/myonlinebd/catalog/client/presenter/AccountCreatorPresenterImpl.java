@@ -3,7 +3,7 @@ package com.myonlinebd.catalog.client.presenter;
 import com.google.gwt.regexp.shared.RegExp;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
-import com.myonlinebd.catalog.shared.ResponseProxy;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
 
 /**
@@ -26,7 +26,7 @@ public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
       if (password.length() >= 8) {
         requestFactory.accountContext().create(email, password).fire(myReceiver);
       } else {
-        view.notifyOfInvalidPassword();
+       view.notifyOfInvalidPassword();
       }
     } else {
       view.notifyOfInvalidEmail();

@@ -18,12 +18,15 @@ public class AccountLocator extends Locator<Account, Long> {
   @Override
   public Account create(Class<? extends Account> clazz) {
     try {
+        System.err.println("Some thing is wrong .... !");
+
       return clazz.newInstance();
     } catch (InstantiationException e) {
       e.printStackTrace();
     } catch (IllegalAccessException e) {
       e.printStackTrace();
     }
+      System.err.println("Some thing is wrong .... ad23d23d23!");
     return null;
   }
 
