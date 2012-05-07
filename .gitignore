@@ -1,7 +1,12 @@
-.idea/
-.idea/*
-onlineBD.iml
-out/
+
 out/*
+out/
+*.class
+.idea/*
+.idea/
+*.jar
+*.war
+*.ear
+onlineBD.iml
 
 

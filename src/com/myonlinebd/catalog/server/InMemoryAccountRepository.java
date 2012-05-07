@@ -14,6 +14,7 @@ public class InMemoryAccountRepository implements AccountRepository {
 
   @Override
   public Account getAccountById(Long id) {
+
     InMemoryAccount inMemoryAccount = accountMap.get(id);
     return null;
   }
@@ -24,7 +25,6 @@ public class InMemoryAccountRepository implements AccountRepository {
     accountMap.put(selfGeneratingId, new InMemoryAccount(selfGeneratingId, accountEmail, password));
     System.out.println("OK ......................!!");
     System.out.println(accountMap.get(selfGeneratingId));
-
   }
 
 

@@ -16,39 +16,45 @@ import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import com.myonlinebd.catalog.client.view.AccountCreatorViewImpl;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
+
 /**
  * Entry point classes define <code>onModuleLoad()</code>
  */
 public class Catalog implements EntryPoint {
 
-  /**
-   * This is the entry point method.
-   */
-  public void onModuleLoad() {
-
-    HasWidgets mainPanel = RootPanel.get("right");
-    BusinessCardsRequestFactory businessCardsRequestFactory = GWT.create(BusinessCardsRequestFactory.class);
-    EventBus eventBus = new SimpleEventBus();
-    businessCardsRequestFactory.initialize(eventBus);
-
-    AccountCreatorView view = new AccountCreatorViewImpl(new Receiver<ResponseProxy>() {
-      @Override
-      public void onFailure(ServerFailure error) {
-        super.onFailure(error);
-      }
-
-      @Override
-      public void onSuccess(ResponseProxy response) {
-        Window.alert("OK!");
-      }
-    });
-
-    AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(businessCardsRequestFactory, view);
-
-    view.setPresenter(presenter);
-
-    mainPanel.add(view.asWidget());
+    /**
+     * This is the entry point method.
+     */
+    public void onModuleLoad() {
 
 
-  }
+        HasWidgets mainPanel = RootPanel.get("right");
+        BusinessCardsRequestFactory businessCardsRequestFactory = GWT.create(BusinessCardsRequestFactory.class);
+        EventBus eventBus = new SimpleEventBus();
+        businessCardsRequestFactory.initialize(eventBus);
+
+        AccountCreatorView view = new AccountCreatorViewImpl(new Receiver<ResponseProxy>() {
+            @Override
+            public void onFailure(ServerFailure error) {
+
+//                Window.alert(error.getMessage());
+                Window.alert(error.getExceptionType());
+                super.onFailure(error);    //To change body of overridden methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public void onSuccess(ResponseProxy response) {
+                Window.alert("OK!");
+            }
+        });
+
+        AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(businessCardsRequestFactory, view);
+
+        view.setPresenter(presenter);
+
+        mainPanel.add(view.asWidget());
+
+
+
+    }
 }

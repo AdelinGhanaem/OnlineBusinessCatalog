@@ -16,5 +16,4 @@ public interface AccountService {
 
   public Response editAccount(Account account);
 
-
 }

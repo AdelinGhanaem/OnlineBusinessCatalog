@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AccountServiceImpl implements AccountService {
+public class  AccountServiceImpl implements AccountService {
 
 
   private AccountRepository repository;
@@ -21,7 +21,6 @@ public class AccountServiceImpl implements AccountService {
   }
 
   public Response create(String email, String password) {
-
     if (password.length() >= 8) {
       if (isValidEmail(email)) {
         repository.create(email, password);
@@ -42,6 +41,11 @@ public class AccountServiceImpl implements AccountService {
 
   public Account getAccountById(Long  id) {
     return repository.getAccountById(id);
+  }
+
+  @Override
+  public Response editAccount(Account account) {
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
   }
 
 
