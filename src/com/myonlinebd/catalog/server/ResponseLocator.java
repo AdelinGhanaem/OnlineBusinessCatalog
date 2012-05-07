@@ -36,4 +36,5 @@ public class ResponseLocator extends Locator<Response, Long> {
     public Object getVersion(Response domainObject) {
         return 1l;
     }
+
 }

@@ -21,7 +21,6 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
  * Entry point classes define <code>onModuleLoad()</code>
  */
 public class Catalog implements EntryPoint {
-
     /**
      * This is the entry point method.
      */
