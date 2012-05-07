@@ -1,0 +1,23 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:e='urn:import:com.google.gwt.editor.ui.client'>
+
+
+  <g:DecoratorPanel>
+   <div>
+
+     <e:ValueBoxEditorDecorator ui:field="email">
+       <e:valuebox>
+         <g:TextBox/>
+       </e:valuebox>
+     </e:ValueBoxEditorDecorator>
+
+
+     <g:Button ui:field="editButton" text="Промени"/>
+
+
+   </div>
+
+  </g:DecoratorPanel>
+
+</ui:UiBinder>

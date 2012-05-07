@@ -11,6 +11,7 @@
             <b:VerticalPanel>
                 <b:Label>парола:</b:Label>
                 <b:PasswordTextBox ui:field="password"></b:PasswordTextBox>
+
                 <b:Label ui:field="password_error"></b:Label>
             </b:VerticalPanel>
             <b:VerticalPanel>

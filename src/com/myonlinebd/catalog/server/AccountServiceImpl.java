@@ -21,6 +21,7 @@ public class AccountServiceImpl implements AccountService {
   }
 
   public Response create(String email, String password) {
+
     if (password.length() >= 8) {
       if (isValidEmail(email)) {
         repository.create(email, password);
