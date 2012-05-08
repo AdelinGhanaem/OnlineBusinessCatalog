@@ -38,9 +38,6 @@ public class AccountServiceImplTest {
     assertThat(returnedResponse.getResponseMessage(), equalTo(response.getResponseMessage()));
   }
 
-
-
-
     @Test
   public void invalidEmailIsNotAllowedAndShouldReturnErrorResponse() {
     final Response response = new Response("Invalid email !");

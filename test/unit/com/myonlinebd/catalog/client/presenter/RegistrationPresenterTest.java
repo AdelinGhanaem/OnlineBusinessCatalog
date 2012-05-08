@@ -4,6 +4,7 @@ import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.google.web.bindery.requestfactory.shared.Request;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
+import com.myonlinebd.catalog.shared.entities.AccountProxy;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
@@ -25,6 +26,7 @@ public class RegistrationPresenterTest {
   private final String password = "password";
   private final String validEmail = "validEmail@mail.com";
   private Request<ResponseProxy> accountRequest = context.mock(Request.class);
+  private AccountProxy accountProxy = context.mock(AccountProxy.class);
 
   public interface ErrorMessages {
 
@@ -35,6 +37,7 @@ public class RegistrationPresenterTest {
   }
 
   private Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
+
     public void onSuccess(ResponseProxy response) {
 
     }
@@ -51,7 +54,7 @@ public class RegistrationPresenterTest {
       will(returnValue(accountRequest));
       oneOf(accountRequest).fire(receiver);
     }});
-     accountCreatorPresenter.createAccount(validEmail, password, receiver);
+    accountCreatorPresenter.createAccount(validEmail, password, receiver);
   }
 
   @Test
@@ -89,8 +92,6 @@ public class RegistrationPresenterTest {
     }});
     accountCreatorPresenter.createAccount(validEmail, shortPassword, receiver);
   }
-
-
 
 
 }

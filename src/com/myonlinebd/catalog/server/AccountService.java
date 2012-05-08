@@ -13,4 +13,7 @@ public interface AccountService {
   public Response create(String email, String password);
 
   Account getAccountById(Long id);
+
+  public Response editAccount(Account account);
+
 }

@@ -2,6 +2,12 @@
         "http://google-web-toolkit.googlecode.com/svn/releases/2.0/distro-source/core/src/gwt-module.dtd">
 <module rename-to="Catalog">
 
+  <!-- Inherit the core Web Toolkit stuff.                  -->
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
+
+  <!-- Specify the app entry point class.                   -->
+  <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
     <source path="shared"/>
     <source path="client"/>
 
@@ -18,10 +24,9 @@
 
     <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
 
-    <!-- Specify the app servlets.                   -->
 
 
-  <!-- Specify the app servlets.                   -->
+
 
 
 </module>

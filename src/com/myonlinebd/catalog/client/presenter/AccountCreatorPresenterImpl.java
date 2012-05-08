@@ -3,8 +3,13 @@ package com.myonlinebd.catalog.client.presenter;
 import com.google.gwt.regexp.shared.RegExp;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
+<<<<<<< HEAD
+import com.myonlinebd.catalog.client.view.AccountCreatorView;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
+=======
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
+>>>>>>> 2c4d87e22d71a808b8c8ebc8c4fb8ab1963497b7
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com

@@ -13,7 +13,8 @@ public class InMemoryAccountRepository implements AccountRepository {
   private Map<Long, InMemoryAccount> accountMap = new HashMap<Long, InMemoryAccount>();
 
   @Override
-  public Account getAccountById(Long  id) {
+  public Account getAccountById(Long id) {
+
     InMemoryAccount inMemoryAccount = accountMap.get(id);
     return null;
   }
@@ -23,6 +24,7 @@ public class InMemoryAccountRepository implements AccountRepository {
     Long selfGeneratingId = new Random().nextLong();
     accountMap.put(selfGeneratingId, new InMemoryAccount(selfGeneratingId, accountEmail, password));
     System.out.println("OK ......................!!");
+    System.out.println(accountMap.get(selfGeneratingId));
   }
 
 
