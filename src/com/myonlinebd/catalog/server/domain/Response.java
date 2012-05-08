@@ -12,6 +12,7 @@ public class Response {
         responseMessage = message;
     }
 
+    @SuppressWarnings("unused")
     public Response() {
 
     }
