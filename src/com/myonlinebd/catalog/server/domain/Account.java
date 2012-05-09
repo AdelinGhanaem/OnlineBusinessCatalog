@@ -7,6 +7,8 @@ public class Account {
 
   private Long id;
   private String email;
+  private String password;
+
 
   public Account() {
   }
@@ -24,11 +26,21 @@ public class Account {
     return email;
   }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public void setPassword1(String password) {
+    this.password = password;
+  }
+
+  public String getPassword() {
+
+    return password;
+  }
+
 }

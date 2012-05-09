@@ -22,6 +22,8 @@ public interface BusinessCardsRequestFactory extends RequestFactory {
     public Request<AccountProxy> getAccountById(Long id);
 
     public Request<ResponseProxy> editAccount(AccountProxy accountProxy);
+
+    public Request<ResponseProxy> create(AccountProxy accountProxy);
   }
 
   AccountContext accountContext();

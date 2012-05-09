@@ -1,6 +1,7 @@
 package com.myonlinebd.catalog.client.presenter;
 
 import com.google.web.bindery.requestfactory.shared.Receiver;
+import com.myonlinebd.catalog.shared.entities.AccountProxy;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
 /**
@@ -10,4 +11,5 @@ public interface AccountCreatorPresenter {
 
   void createAccount(String email, String password, Receiver<ResponseProxy> myReceiver);
 
+  void createAccount(AccountProxy accountProxy);
 }

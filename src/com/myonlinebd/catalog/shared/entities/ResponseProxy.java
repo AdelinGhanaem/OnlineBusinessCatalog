@@ -10,8 +10,9 @@ import com.myonlinebd.catalog.server.domain.Response;
 @ProxyFor(value = Response.class)
 public interface ResponseProxy extends ValueProxy {
 
-    public String getResponseMessage();
+  public String getResponseMessage();
 
-    public void setResponseMessage(String responseMessage);
+  public void setResponseMessage(String responseMessage);
+
 
 }
