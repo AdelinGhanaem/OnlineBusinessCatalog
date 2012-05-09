@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class  AccountServiceImpl implements AccountService {
+public class AccountServiceImpl implements AccountService {
 
 
   private AccountRepository repository;
@@ -39,13 +39,21 @@ public class  AccountServiceImpl implements AccountService {
     return matcher.matches();
   }
 
-  public Account getAccountById(Long  id) {
+  public Account getAccountById(Long id) {
     return repository.getAccountById(id);
   }
 
   @Override
   public Response editAccount(Account account) {
     return null;  //To change body of implemented methods use File | Settings | File Templates.
+  }
+
+  @Override
+  public Response create(Account account) {
+    System.out.println("account.getId():"+account.getId());
+    System.out.println("account.getEmail():"+account.getEmail());
+    System.out.println("account.getPassword():"+account.getPassword());
+    return new Response();
   }
 
 

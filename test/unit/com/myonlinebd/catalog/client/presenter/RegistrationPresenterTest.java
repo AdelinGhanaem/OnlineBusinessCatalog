@@ -23,8 +23,6 @@ public class RegistrationPresenterTest {
   private BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
   private BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
   private AccountCreatorView view = context.mock(AccountCreatorView.class);
-  private final String password = "password";
-  private final String validEmail = "validEmail@mail.com";
   private Request<ResponseProxy> accountRequest = context.mock(Request.class);
   private AccountProxy accountProxy = context.mock(AccountProxy.class);
 
@@ -45,53 +43,66 @@ public class RegistrationPresenterTest {
 
   private AccountCreatorPresenter accountCreatorPresenter = new AccountCreatorPresenterImpl(requestFactory, view);
 
+
   @Test
-  public void shouldCreateANewRegistrationAndReturnResponse() {
+  public void shouldCreateNewAccount() {
+
     context.checking(new Expectations() {{
       oneOf(requestFactory).accountContext();
       will(returnValue(accountContext));
-      oneOf(accountContext).create(validEmail, password);
-      will(returnValue(accountRequest));
-      oneOf(accountRequest).fire(receiver);
+      oneOf(accountContext).create(accountProxy);
     }});
-    accountCreatorPresenter.createAccount(validEmail, password, receiver);
+    accountCreatorPresenter.createAccount(accountProxy);
   }
 
-  @Test
-  public void providingInvalidEmailIsNotAllowed() {
-    final String invalidEmail = "invalidEmail";
-    context.checking(new Expectations() {{
-      oneOf(view).notifyOfInvalidEmail();
-      never(requestFactory).accountContext();
-      never(accountContext).create(invalidEmail, password);
-      never(accountRequest).fire(receiver);
-    }});
-    accountCreatorPresenter.createAccount(invalidEmail, password, receiver);
-  }
 
-  @Test
-  public void providingAnotherInvalidEmailIsNotAllowed() {
-    final String anotherInvalidEmail = "anotherInvalidEmail";
-    context.checking(new Expectations() {{
-      oneOf(view).notifyOfInvalidEmail();
-      never(requestFactory).accountContext();
-      never(accountContext).create(anotherInvalidEmail, password);
-      never(accountRequest).fire(receiver);
-    }});
-    accountCreatorPresenter.createAccount(anotherInvalidEmail, password, receiver);
-  }
-
-  @Test
-  public void providingPasswordLessThanEightCharactersIsNotAllowed() {
-    final String shortPassword = "123";
-    context.checking(new Expectations() {{
-      oneOf(view).notifyOfInvalidPassword();
-      never(requestFactory).accountContext();
-      never(accountContext).create(validEmail, shortPassword);
-      never(accountRequest).fire(receiver);
-    }});
-    accountCreatorPresenter.createAccount(validEmail, shortPassword, receiver);
-  }
+//  @Test
+//  public void shouldCreateANewRegistrationAndReturnResponse() {
+//    context.checking(new Expectations() {{
+//      oneOf(requestFactory).accountContext();
+//      will(returnValue(accountContext));
+//      oneOf(accountContext).create(validEmail, password);
+//      will(returnValue(accountRequest));
+//      oneOf(accountRequest).fire(receiver);
+//    }});
+//    accountCreatorPresenter.create(validEmail, password, receiver);
+//  }
+//
+//  @Test
+//  public void providingInvalidEmailIsNotAllowed() {
+//    final String invalidEmail = "invalidEmail";
+//    context.checking(new Expectations() {{
+//      oneOf(view).notifyOfInvalidEmail();
+//      never(requestFactory).accountContext();
+//      never(accountContext).create(invalidEmail, password);
+//      never(accountRequest).fire(receiver);
+//    }});
+//    accountCreatorPresenter.create(invalidEmail, password, receiver);
+//  }
+//
+//  @Test
+//  public void providingAnotherInvalidEmailIsNotAllowed() {
+//    final String anotherInvalidEmail = "anotherInvalidEmail";
+//    context.checking(new Expectations() {{
+//      oneOf(view).notifyOfInvalidEmail();
+//      never(requestFactory).accountContext();
+//      never(accountContext).create(anotherInvalidEmail, password);
+//      never(accountRequest).fire(receiver);
+//    }});
+//    accountCreatorPresenter.create(anotherInvalidEmail, password, receiver);
+//  }
+//
+//  @Test
+//  public void providingPasswordLessThanEightCharactersIsNotAllowed() {
+//    final String shortPassword = "123";
+//    context.checking(new Expectations() {{
+//      oneOf(view).notifyOfInvalidPassword();
+//      never(requestFactory).accountContext();
+//      never(accountContext).create(validEmail, shortPassword);
+//      never(accountRequest).fire(receiver);
+//    }});
+//    accountCreatorPresenter.create(validEmail, shortPassword, receiver);
+//  }
 
 
 }

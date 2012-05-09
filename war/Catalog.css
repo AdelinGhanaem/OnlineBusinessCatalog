@@ -20,19 +20,16 @@ body, td, a, div, .p {
 
 #header {
     height: 200px;
-    border: solid;
     padding: 2px;
 }
 
 #logo {
     height: 190px;
-    border: solid;
 }
 
 #main_bar {
 
     height: 72px;
-    border: solid;
     background-image: url('resources/img/bar_bg.png');
 }
 

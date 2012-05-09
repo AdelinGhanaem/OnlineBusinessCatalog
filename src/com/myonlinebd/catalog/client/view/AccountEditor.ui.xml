@@ -3,21 +3,17 @@
              xmlns:e='urn:import:com.google.gwt.editor.ui.client'>
 
 
-  <g:DecoratorPanel>
-   <div>
+  <g:HTMLPanel>
 
-     <e:ValueBoxEditorDecorator ui:field="email">
-       <e:valuebox>
-         <g:TextBox/>
-       </e:valuebox>
-     </e:ValueBoxEditorDecorator>
-
-
-     <g:Button ui:field="editButton" text="Промени"/>
+    <div>
+      Email:
+      <g:TextBox ui:field="email"/>
+      Password:
+      <g:PasswordTextBox ui:field="password"/>
+    </div>
 
 
-   </div>
+  </g:HTMLPanel>
 
-  </g:DecoratorPanel>
 
 </ui:UiBinder>

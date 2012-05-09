@@ -16,4 +16,6 @@ public interface AccountService {
 
   public Response editAccount(Account account);
 
+  public Response create(Account account);
+
 }
