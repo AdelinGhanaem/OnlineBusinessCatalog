@@ -11,16 +11,19 @@ import com.myonlinebd.catalog.server.domain.Account;
 @ProxyFor(value = Account.class, locator = AccountLocator.class)
 public interface AccountProxy extends EntityProxy {
 
-
-  public Long getId();
-
-  public void setId(Long id);
-
-  public String getEmail();
-
   public void setEmail(String email);
 
-  public void setPassword1(String password);
+  public void setPassword(String password);
+
+  public void setAddress(AddressProxy address);
+
+  public void setOwnerName(String ownerName);
+
+  public void setCompanyName(String companyName);
+
+  public void setActivityType(String activityType);
+
+  public String getEmail();
 
   public String getPassword();
 

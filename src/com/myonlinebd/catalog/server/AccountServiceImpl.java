@@ -50,12 +50,11 @@ public class AccountServiceImpl implements AccountService {
 
   @Override
   public Response create(Account account) {
-    System.out.println("account.getId():"+account.getId());
-    System.out.println("account.getEmail():"+account.getEmail());
-    System.out.println("account.getPassword():"+account.getPassword());
+    System.out.println("account.getId(): "+account.getId());
+    System.out.println("account.getEmail(): "+account.getEmail());
     return new Response();
   }
 
-
   //TODO:Eliminate The if else .... !
+
 }

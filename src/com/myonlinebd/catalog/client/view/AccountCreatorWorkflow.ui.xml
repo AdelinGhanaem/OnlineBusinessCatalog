@@ -4,6 +4,9 @@
 
 
   <b:HTMLPanel>
+    <!--<b:DecoratorPanel>-->
+      <!--<b:Label text="label" ui:field="label"/>-->
+    <!--</b:DecoratorPanel>-->
     <mb:AccountEditor ui:field="accountEditor"/>
     <b:Button ui:field="submit" text="create"/>
   </b:HTMLPanel>

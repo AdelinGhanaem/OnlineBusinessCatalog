@@ -1,5 +1,7 @@
 package com.myonlinebd.catalog.server.domain;
 
+import com.google.gwt.validation.client.GwtValidation;
+
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
@@ -8,6 +10,10 @@ public class Account {
   private Long id;
   private String email;
   private String password;
+  private Address address;
+  private String companyName;
+  private String ownerName;
+  private String activityType;
 
 
   public Account() {
@@ -26,6 +32,28 @@ public class Account {
     return email;
   }
 
+  public String getPassword() {
+    return password;
+
+
+  }
+
+  public Address getAddress() {
+    return address;
+  }
+
+  public String getCompanyName() {
+    return companyName;
+  }
+
+  public String getOwnerName() {
+    return ownerName;
+  }
+
+  public String getActivityType() {
+    return activityType;
+  }
+
   public void setId(Long id) {
     this.id = id;
   }
@@ -34,13 +62,23 @@ public class Account {
     this.email = email;
   }
 
-  public void setPassword1(String password) {
+  public void setPassword(String password) {
     this.password = password;
   }
 
-  public String getPassword() {
-
-    return password;
+  public void setAddress(Address address) {
+    this.address = address;
   }
 
+  public void setOwnerName(String ownerName) {
+    this.ownerName = ownerName;
+  }
+
+  public void setCompanyName(String companyName) {
+    this.companyName = companyName;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
 }
