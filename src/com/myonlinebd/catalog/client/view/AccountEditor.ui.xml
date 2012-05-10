@@ -1,16 +1,16 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
-             xmlns:e='urn:import:com.google.gwt.editor.ui.client'>
+               xmlns:e='urn:import:com.google.gwt.editor.ui.client'
+             xmlns:myWidget='urn:import:com.myonlinebd.catalog.client.view'>
 
 
   <g:HTMLPanel>
 
-    <div>
-      Email:
-      <g:TextBox ui:field="email"/>
-      Password:
-      <g:PasswordTextBox ui:field="password"/>
-    </div>
+    <myWidget:AddressEditor ui:field="addressEditor"/>
+    <g:Label text="Email"/>
+    <g:TextBox ui:field="email"/>
+    <g:Label text="Password"/>
+    <g:PasswordTextBox ui:field="password"/>
 
 
   </g:HTMLPanel>

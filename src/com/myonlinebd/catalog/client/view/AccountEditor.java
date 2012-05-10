@@ -23,14 +23,14 @@ public class AccountEditor extends Composite implements Editor<AccountProxy> {
 
   @UiField
   public TextBox email;
+
   @UiField
   public PasswordTextBox password;
+
+  @UiField
+  public AddressEditor addressEditor;
 
   public AccountEditor() {
     initWidget(binder.createAndBindUi(this));
   }
-
-
-
-
 }

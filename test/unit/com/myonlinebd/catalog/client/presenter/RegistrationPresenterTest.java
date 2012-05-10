@@ -1,9 +1,7 @@
 package com.myonlinebd.catalog.client.presenter;
 
 import com.google.web.bindery.requestfactory.shared.Receiver;
-import com.google.web.bindery.requestfactory.shared.Request;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
-import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 import org.jmock.Expectations;
@@ -22,38 +20,58 @@ public class RegistrationPresenterTest {
   private Mockery context = new Mockery();
   private BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
   private BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
-  private AccountCreatorView view = context.mock(AccountCreatorView.class);
-  private Request<ResponseProxy> accountRequest = context.mock(Request.class);
-  private AccountProxy accountProxy = context.mock(AccountProxy.class);
-
-  public interface ErrorMessages {
-
-    public String invalidEmail();
-
-    public String invalidPassword();
-
-  }
-
-  private Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
-
-    public void onSuccess(ResponseProxy response) {
-
-    }
-  };
-
-  private AccountCreatorPresenter accountCreatorPresenter = new AccountCreatorPresenterImpl(requestFactory, view);
-
+  private AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(requestFactory);
 
   @Test
-  public void shouldCreateNewAccount() {
+  public void shouldRegisterNewAccount() {
+    final Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
+      @Override
+      public void onSuccess(ResponseProxy response) {
 
+      }
+    };
+    final AccountProxy proxy = context.mock(AccountProxy.class);
     context.checking(new Expectations() {{
       oneOf(requestFactory).accountContext();
       will(returnValue(accountContext));
-      oneOf(accountContext).create(accountProxy);
+      oneOf(accountContext).create(proxy).fire(receiver);
     }});
-    accountCreatorPresenter.createAccount(accountProxy);
+//    presenter.createAccount(context, proxy, receiver);
   }
+
+
+//  private BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
+//  private Request<ResponseProxy> accountRequest = context.mock(Request.class);
+//  private AccountProxy accountProxy = context.mock(AccountProxy.class);
+//
+//  public interface ErrorMessages {
+//
+//    public String invalidEmail();
+//
+//    public String invalidPassword();
+//
+//  }
+//
+//  private Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
+//
+//    public void onSuccess(ResponseProxy response) {
+//
+//    }
+//  };
+//
+//  private AccountCreatorPresenter accountCreatorPresenter = new AccountCreatorPresenterImpl(requestFactory, view);
+//
+//
+//  @Test
+//  public void shouldCreateNewAccount() {
+//
+//    context.checking(new Expectations() {{
+//      oneOf(requestFactory).accountContext();
+//      will(returnValue(accountContext));
+//      oneOf(accountContext).create(accountProxy);
+//    }});
+//    accountCreatorPresenter.createAccount(accountProxy);
+//  }
 
 
 //  @Test
