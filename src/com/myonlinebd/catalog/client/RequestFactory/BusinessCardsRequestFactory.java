@@ -17,8 +17,6 @@ public interface BusinessCardsRequestFactory extends RequestFactory {
   @Service(value = AccountService.class, locator = MyServicesLocator.class)
   public interface AccountContext extends RequestContext {
 
-    public Request<ResponseProxy> create(String email, String password);
-
     public Request<AccountProxy> getAccountById(Long id);
 
     public Request<ResponseProxy> editAccount(AccountProxy accountProxy);

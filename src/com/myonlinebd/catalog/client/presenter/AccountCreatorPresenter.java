@@ -10,6 +10,6 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
  */
 public interface AccountCreatorPresenter {
 
+   void createAccount(BusinessCardsRequestFactory.AccountContext context, AccountProxy accountProxy, Receiver<ResponseProxy> receiver);
 
-  void createAccount(BusinessCardsRequestFactory.AccountContext context, AccountProxy accountProxy, Receiver<ResponseProxy> receiver);
 }

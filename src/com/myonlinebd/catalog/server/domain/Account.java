@@ -1,7 +1,5 @@
 package com.myonlinebd.catalog.server.domain;
 
-import com.google.gwt.validation.client.GwtValidation;
-
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
@@ -10,7 +8,7 @@ public class Account {
   private Long id;
   private String email;
   private String password;
-  private Address address;
+  private Address address=new Address();
   private String companyName;
   private String ownerName;
   private String activityType;
@@ -81,4 +79,6 @@ public class Account {
   public void setActivityType(String activityType) {
     this.activityType = activityType;
   }
+
+
 }

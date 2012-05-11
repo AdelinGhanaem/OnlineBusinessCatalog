@@ -1,16 +1,18 @@
 package com.myonlinebd.catalog.client.view;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.editor.client.Editor;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.TextBox;
+import com.myonlinebd.catalog.shared.entities.AddressProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AddressEditor extends Composite {
+public class AddressEditor extends Composite implements Editor<AddressProxy> {
 
 
   @UiField
@@ -27,9 +29,8 @@ public class AddressEditor extends Composite {
 
   AddressEditorBinder binder = GWT.create(AddressEditorBinder.class);
 
+
   public AddressEditor() {
     initWidget(binder.createAndBindUi(this));
   }
-
-
 }

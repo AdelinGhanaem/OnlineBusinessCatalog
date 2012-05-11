@@ -5,8 +5,6 @@ import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.myonlinebd.catalog.server.AccountLocator;
 import com.myonlinebd.catalog.server.domain.Account;
 
-import javax.validation.constraints.Size;
-
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
@@ -27,8 +25,9 @@ public interface AccountProxy extends EntityProxy {
 
   public String getEmail();
 
-  @Size(min=6)
   public String getPassword();
+
+  public AddressProxy getAddress();
 
 
 }

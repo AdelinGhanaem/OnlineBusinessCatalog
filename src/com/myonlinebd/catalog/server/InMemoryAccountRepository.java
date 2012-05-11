@@ -4,7 +4,6 @@ import com.myonlinebd.catalog.server.domain.Account;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -18,15 +17,6 @@ public class InMemoryAccountRepository implements AccountRepository {
     InMemoryAccount inMemoryAccount = accountMap.get(id);
     return null;
   }
-
-  @Override
-  public void create(String accountEmail, String password) {
-    Long selfGeneratingId = new Random().nextLong();
-    accountMap.put(selfGeneratingId, new InMemoryAccount(selfGeneratingId, accountEmail, password));
-    System.out.println("OK ......................!!");
-    System.out.println(accountMap.get(selfGeneratingId));
-  }
-
 
   private class InMemoryAccount {
     Long id;

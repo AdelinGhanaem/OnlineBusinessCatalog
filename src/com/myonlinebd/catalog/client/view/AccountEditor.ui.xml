@@ -6,7 +6,7 @@
 
   <g:HTMLPanel>
 
-    <myWidget:AddressEditor ui:field="addressEditor"/>
+    <myWidget:AddressEditor ui:field="addressEditor"></myWidget:AddressEditor>
     <g:Label text="Email"/>
     <g:TextBox ui:field="email"/>
     <g:Label text="Password"/>

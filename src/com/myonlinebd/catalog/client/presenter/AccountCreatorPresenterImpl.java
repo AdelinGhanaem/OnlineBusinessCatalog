@@ -1,7 +1,9 @@
 package com.myonlinebd.catalog.client.presenter;
 
+import com.google.gwt.regexp.shared.RegExp;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
@@ -10,18 +12,39 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
  */
 public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
 
-  private final BusinessCardsRequestFactory factory;
+  private class Field {
+  }
 
-  public AccountCreatorPresenterImpl(BusinessCardsRequestFactory requestFactory) {
+  private AccountCreatorView view;
 
-    factory = requestFactory;
+  public AccountCreatorPresenterImpl(BusinessCardsRequestFactory requestFactory, AccountCreatorView creatorView) {
+    view = creatorView;
   }
 
 
   @Override
   public void createAccount(BusinessCardsRequestFactory.AccountContext context, AccountProxy accountProxy, Receiver<ResponseProxy> receiver) {
-    context.create(accountProxy).fire(receiver);
+    if (!isValidEmail(accountProxy.getEmail())) {
+      view.invalidEmail();
+    } else {
+      if (!isValid(accountProxy.getPassword(),"^[a-zA-Z0-9]{6,}$")) {
+        view.inValidPassword();
+      } else {
+        context.create(accountProxy).fire(receiver);
+      }
+    }
   }
+
+
+  private boolean isValidEmail(String email) {
+    return RegExp.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}$").test(email);
+
+  }
+
+  private boolean isValid(String field, String regex) {
+    return RegExp.compile(regex).test(field);
+  }
+
 
 
   //TODO:Eliminate the if else statement from the createAccountFunction !!!
