@@ -45,7 +45,10 @@ body, td, a, div, .p {
 }
 
 #right {
+    padding: 5px 5px;
     float: right;
     width: 80%;
     height: auto;
 }
+
+

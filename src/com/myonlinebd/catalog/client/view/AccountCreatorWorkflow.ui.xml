@@ -1,15 +1,15 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:b='urn:import:com.google.gwt.user.client.ui'
              xmlns:mb="urn:import:com.myonlinebd.catalog.client.view">
+  <ui:style>
 
-
-  <b:HTMLPanel>
-    <!--<b:DecoratorPanel>-->
-      <!--<b:Label text="label" ui:field="label"/>-->
-    <!--</b:DecoratorPanel>-->
-    <mb:AccountEditor ui:field="accountEditor"/>
-    <b:Button ui:field="submit" text="create"/>
-  </b:HTMLPanel>
+  </ui:style>
+    <b:DecoratorPanel >
+      <b:HTMLPanel>
+        <mb:AccountEditor ui:field="accountEditor"/>
+        <b:Button ui:field="submit" text="create"/>
+      </b:HTMLPanel>
+    </b:DecoratorPanel>
 
 
 </ui:UiBinder>

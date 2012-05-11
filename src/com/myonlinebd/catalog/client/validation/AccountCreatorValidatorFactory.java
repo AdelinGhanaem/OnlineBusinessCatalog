@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.client;
+package com.myonlinebd.catalog.client.validation;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.validation.client.AbstractGwtValidatorFactory;
