@@ -5,9 +5,10 @@
 
   </ui:style>
     <b:DecoratorPanel >
-      <b:HTMLPanel>
-        <mb:AccountEditor ui:field="accountEditor"/>
+      <b:HTMLPanel >
+        <mb:AccountEditor ui:field="accountEditor"></mb:AccountEditor>
         <b:Button ui:field="submit" text="create"/>
+        <b:Label ui:field="errorMessages" text="" />
       </b:HTMLPanel>
     </b:DecoratorPanel>
 

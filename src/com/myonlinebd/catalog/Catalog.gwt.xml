@@ -19,8 +19,9 @@
 
   <inherits name="javax.validation.Validation"/>
 
-  <!--<super-source path="jre"/>-->
 
+  <!--<super-source path="jre"/>-->
+<super-source path="jre"/>
 
   <!-- Specify the app entry point class.                   -->
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
@@ -33,6 +34,7 @@
 
   <source path="client"/>
 
+  <source path="jre"/>
 
 
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>

@@ -10,41 +10,25 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.HasWidgets;
-import com.google.gwt.validation.client.Validation;
+import com.google.gwt.user.client.ui.Label;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
-import com.myonlinebd.catalog.shared.ClientGroup;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
+import com.myonlinebd.catalog.shared.entities.AddressProxy;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
-
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
-import javax.validation.groups.Default;
-import java.util.Set;
 
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AccountCreatorWorkflow extends Composite {
+public class AccountCreatorWorkflow extends Composite implements AccountCreatorView {
 
 
-  //  interface AccountCreatorWorkflowBinder extends UiBinder<HTMLPanel, AccountCreatorWorkflow> {
-//  }
-//
   AccountCreatorWorkflowBinder binder = GWT.create(AccountCreatorWorkflowBinder.class);
 
-  //
-//  @UiField
-//  Label label;
-//
-//  public AccountCreatorWorkflow() {
-//    initWidget(binder.createAndBindUi(this));
-//  }
-//
-//
+
   public void show(HasWidgets hasWidgets) {
     hasWidgets.clear();
     hasWidgets.add(this.asWidget());
@@ -62,8 +46,6 @@ public class AccountCreatorWorkflow extends Composite {
   private Driver driver;
 
 
-  private BusinessCardsRequestFactory factory;
-
   private AccountCreatorPresenter presenter;
 
   BusinessCardsRequestFactory.AccountContext context;
@@ -76,24 +58,22 @@ public class AccountCreatorWorkflow extends Composite {
   @UiField
   Button submit;
 
-  Receiver<ResponseProxy> receiver;
+  @UiField
+  Label errorMessages;
 
-  public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory, AccountCreatorPresenter creatorPresenter) {
+  public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory) {
 
     initWidget(binder.createAndBindUi(this));
 
-    presenter = creatorPresenter;
-
-    factory = requestFactory;
-
     driver = GWT.create(Driver.class);
     //initialize the drive with factory and account editor
-    driver.initialize(factory, accountEditor);
+    driver.initialize(requestFactory, accountEditor);
 
     //save the proxy on the server
-    context = factory.accountContext();
+    context = requestFactory.accountContext();
     //create the proxy
     proxy = context.create(AccountProxy.class);
+    proxy.setAddress(context.create(AddressProxy.class));
     //return a mutable proxy
     proxy = context.edit(proxy);
 
@@ -105,22 +85,32 @@ public class AccountCreatorWorkflow extends Composite {
   @UiHandler("submit")
   public void onSubmit(ClickEvent event) {
 
-    //copy the fields into the proxy
     driver.flush();
-    Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-    Set<ConstraintViolation<AccountProxy>> violations = validator.validate(proxy, Default.class, ClientGroup.class);
-    if (violations.isEmpty()) {
-      presenter.createAccount(context, proxy, new Receiver<ResponseProxy>() {
-        @Override
-        public void onSuccess(ResponseProxy response) {
-          Window.alert("So far so good !");
-        }
-      });
-    } else {
-
-      Window.alert("Like u made it ?!" + "  " + violations.toString());
+    if (proxy.getAddress() != null) {
+     Window.alert(proxy.getAddress().getStreet()  );
     }
 
+    presenter.createAccount(context, proxy, new Receiver<ResponseProxy>() {
+      @Override
+      public void onSuccess(ResponseProxy response) {
+        Window.alert("So far so good !");
+      }
+    });
+  }
+
+
+  public void setPresenter(AccountCreatorPresenter accountCreatorPresenter) {
+    presenter = accountCreatorPresenter;
+  }
+
+  @Override
+  public void invalidEmail() {
+    errorMessages.setText("Invalid email ");
+  }
+
+  @Override
+  public void inValidPassword() {
+    errorMessages.setText("Invalid password, you password should be 6 chars length !");
   }
 
 

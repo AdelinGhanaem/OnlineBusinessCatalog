@@ -35,4 +35,12 @@ public class Address {
     this.street = street;
   }
 
+  @Override
+  public String toString() {
+    return "Address{" +
+            "town='" + town + '\'' +
+            ", postalCode='" + postalCode + '\'' +
+            ", street='" + street + '\'' +
+            '}';
+  }
 }

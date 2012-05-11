@@ -16,6 +16,12 @@ public interface AddressProxy extends ValueProxy {
 
   public void setStreet(String street);
 
+  public String getStreet();
+  
+  public String getPostalCode();
+  
+  public String getTown();
+  
 
 
 }
