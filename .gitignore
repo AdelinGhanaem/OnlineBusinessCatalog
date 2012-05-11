@@ -7,6 +7,7 @@ out/
 *.jar
 *.war
 *.ear
+src/com/myonlinebd/catalog/jre/
 onlineBD.iml
 
 
