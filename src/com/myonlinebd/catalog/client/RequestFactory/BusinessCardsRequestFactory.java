@@ -14,18 +14,17 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
  */
 public interface BusinessCardsRequestFactory extends RequestFactory {
 
-  @Service(value = AccountService.class, locator = MyServicesLocator.class)
-  public interface AccountContext extends RequestContext {
+    @Service(value = AccountService.class, locator = MyServicesLocator.class)
+    public interface AccountContext extends RequestContext {
 
+        public Request<AccountProxy> getAccountById(Long id);
 
-    public Request<ResponseProxy> create(String email, String password);
+        public Request<ResponseProxy> editAccount(AccountProxy accountProxy);
 
-    public Request<AccountProxy> getAccountById(Long id);
+        public Request<ResponseProxy> create(AccountProxy accountProxy);
+    }
 
-    public Request<ResponseProxy> editAccount(AccountProxy accountProxy);
-  }
-
-  AccountContext accountContext();
+    AccountContext accountContext();
 
 
 }

@@ -1,7 +1,6 @@
 package com.myonlinebd.catalog.client.presenter;
 
 import com.google.web.bindery.requestfactory.shared.Receiver;
-import com.google.web.bindery.requestfactory.shared.Request;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
@@ -9,6 +8,7 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.integration.junit4.JMock;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -23,75 +23,70 @@ public class RegistrationPresenterTest {
   private BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
   private BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
   private AccountCreatorView view = context.mock(AccountCreatorView.class);
-  private final String password = "password";
-  private final String validEmail = "validEmail@mail.com";
-  private Request<ResponseProxy> accountRequest = context.mock(Request.class);
-  private AccountProxy accountProxy = context.mock(AccountProxy.class);
-
-  public interface ErrorMessages {
-
-    public String invalidEmail();
-
-    public String invalidPassword();
-
-  }
-
-  private Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
-
+  private AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(requestFactory, view);
+  final Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
+    @Override
     public void onSuccess(ResponseProxy response) {
 
     }
   };
 
-  private AccountCreatorPresenter accountCreatorPresenter = new AccountCreatorPresenterImpl(requestFactory, view);
+  final AccountProxy proxy = new TestAccountProxy();
 
-  @Test
-  public void shouldCreateANewRegistrationAndReturnResponse() {
-    context.checking(new Expectations() {{
-      oneOf(requestFactory).accountContext();
-      will(returnValue(accountContext));
-      oneOf(accountContext).create(validEmail, password);
-      will(returnValue(accountRequest));
-      oneOf(accountRequest).fire(receiver);
-    }});
-    accountCreatorPresenter.createAccount(validEmail, password, receiver);
+  @Before
+  public void setUp() {
+    proxy.setEmail("Adelin_H@hotmail.com");
+    proxy.setPassword("123456");
   }
 
   @Test
-  public void providingInvalidEmailIsNotAllowed() {
-    final String invalidEmail = "invalidEmail";
+  public void shouldRegisterNewAccount() {
     context.checking(new Expectations() {{
-      oneOf(view).notifyOfInvalidEmail();
-      never(requestFactory).accountContext();
-      never(accountContext).create(invalidEmail, password);
-      never(accountRequest).fire(receiver);
+      oneOf(accountContext).create(proxy).fire(receiver);
     }});
-    accountCreatorPresenter.createAccount(invalidEmail, password, receiver);
+    proxy.setEmail("adelin_H@hotmail.com");
+    presenter.createAccount(accountContext, proxy, receiver);
+  }
+
+
+  @Test
+  public void shouldNotifyUserWhenEmailIsInvalid() {
+    context.checking(new Expectations() {{
+      oneOf(view).invalidEmail();
+      never(accountContext).create(proxy).fire(receiver);
+    }});
+    proxy.setEmail("invalidEmail!!");
+    presenter.createAccount(accountContext, proxy, receiver);
   }
 
   @Test
-  public void providingAnotherInvalidEmailIsNotAllowed() {
-    final String anotherInvalidEmail = "anotherInvalidEmail";
+  public void tryWithAnotherInvalidEmail() {
     context.checking(new Expectations() {{
-      oneOf(view).notifyOfInvalidEmail();
-      never(requestFactory).accountContext();
-      never(accountContext).create(anotherInvalidEmail, password);
-      never(accountRequest).fire(receiver);
+      oneOf(view).invalidEmail();
+      never(accountContext).create(proxy).fire(receiver);
     }});
-    accountCreatorPresenter.createAccount(anotherInvalidEmail, password, receiver);
+    proxy.setEmail("AnotherInvalidEmail");
+    presenter.createAccount(accountContext, proxy, receiver);
+  }
+
+
+  @Test
+  public void emptyPasswordIsNotAllowed() {
+    context.checking(new Expectations() {{
+      oneOf(view).inValidPassword();
+      never(accountContext).create(proxy);
+    }});
+    proxy.setPassword("");
+    presenter.createAccount(accountContext, proxy, receiver);
   }
 
   @Test
-  public void providingPasswordLessThanEightCharactersIsNotAllowed() {
-    final String shortPassword = "123";
+  public void passwordLessThanSixCharsIsNoAllowed() {
     context.checking(new Expectations() {{
-      oneOf(view).notifyOfInvalidPassword();
-      never(requestFactory).accountContext();
-      never(accountContext).create(validEmail, shortPassword);
-      never(accountRequest).fire(receiver);
+      oneOf(view).inValidPassword();
+      never(accountContext).create(proxy);
     }});
-    accountCreatorPresenter.createAccount(validEmail, shortPassword, receiver);
+    proxy.setPassword("123");
+    presenter.createAccount(accountContext, proxy, receiver);
   }
-
-
 }

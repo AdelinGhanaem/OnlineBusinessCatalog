@@ -4,28 +4,40 @@
 
   <!-- Inherit the core Web Toolkit stuff.                  -->
   <inherits name='com.google.gwt.user.User'/>
+
   <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
+
+  <inherits name='com.google.gwt.user.theme.clean.Clean'/>
+
+  <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
+
+  <inherits name='com.google.gwt.user.User'/>
+
+  <inherits name="com.google.gwt.uibinder.UiBinder"/>
+
+  <inherits name="org.hibernate.validator.HibernateValidator"/>
+
+  <inherits name="javax.validation.Validation"/>
+
+
+  <!--<super-source path="jre"/>-->
+<super-source path="jre"/>
 
   <!-- Specify the app entry point class.                   -->
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
-    <source path="shared"/>
-    <source path="client"/>
+  <!-- Inherit the core Web Toolkit stuff.                  -->
+  <replace-with class="com.myonlinebd.catalog.client.validation.ValidatorFactory">
+    <when-type-is class="javax.validation.ValidatorFactory"/>
+  </replace-with>
 
-    <!-- Inherit the core Web Toolkit stuff.                  -->
-    <inherits name='com.google.gwt.user.User'/>
-    <inherits name="com.google.gwt.uibinder.UiBinder"/>
-  <!-- Specify the app entry point class.                   -->
+  <source path="shared"/>
 
+  <source path="client"/>
 
-
-    <inherits name="javax.validation.Validation"/>
-
-    <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
-
-    <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
+  <source path="jre"/>
 
 
-
+  <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
 
 
 

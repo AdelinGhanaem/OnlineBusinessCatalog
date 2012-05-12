@@ -10,10 +10,10 @@ import com.myonlinebd.catalog.server.domain.Response;
 
 public interface AccountService {
 
-  public Response create(String email, String password);
-
   Account getAccountById(Long id);
 
   public Response editAccount(Account account);
+
+  public Response create(Account account);
 
 }

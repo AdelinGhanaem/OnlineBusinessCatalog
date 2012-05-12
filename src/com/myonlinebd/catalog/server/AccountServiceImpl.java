@@ -3,13 +3,10 @@ package com.myonlinebd.catalog.server;
 import com.myonlinebd.catalog.server.domain.Account;
 import com.myonlinebd.catalog.server.domain.Response;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class  AccountServiceImpl implements AccountService {
+public class AccountServiceImpl implements AccountService {
 
 
   private AccountRepository repository;
@@ -20,26 +17,8 @@ public class  AccountServiceImpl implements AccountService {
     responseFactory = factory;
   }
 
-  public Response create(String email, String password) {
-    if (password.length() >= 8) {
-      if (isValidEmail(email)) {
-        repository.create(email, password);
-      } else {
-        return responseFactory.invalidEmail();
-      }
-    } else {
-      return responseFactory.shortPassword();
-    }
-    return responseFactory.accountCreated();
-  }
 
-  private boolean isValidEmail(String email) {
-    Pattern pattern = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$");
-    Matcher matcher = pattern.matcher(email);
-    return matcher.matches();
-  }
-
-  public Account getAccountById(Long  id) {
+  public Account getAccountById(Long id) {
     return repository.getAccountById(id);
   }
 
@@ -48,6 +27,14 @@ public class  AccountServiceImpl implements AccountService {
     return null;  //To change body of implemented methods use File | Settings | File Templates.
   }
 
+  @Override
+  public Response create(Account account) {
+    System.out.println("account.getEmail(): " + account.getEmail());
+    System.out.println("account.getPassword():" + account.getPassword());
+    System.out.println("account.getAddress()"+ account.getAddress());
+    return new Response();
+  }
 
   //TODO:Eliminate The if else .... !
+
 }

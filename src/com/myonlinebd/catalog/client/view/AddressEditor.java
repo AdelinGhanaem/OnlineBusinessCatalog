@@ -6,31 +6,31 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.PasswordTextBox;
 import com.google.gwt.user.client.ui.TextBox;
-import com.myonlinebd.catalog.shared.entities.AccountProxy;
-
+import com.myonlinebd.catalog.shared.entities.AddressProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AccountEditor extends Composite implements Editor<AccountProxy> {
+public class AddressEditor extends Composite implements Editor<AddressProxy> {
 
-  interface AccountEditorUiBinder extends UiBinder<HTMLPanel, AccountEditor> {
+
+  @UiField
+  TextBox postalCode;
+  
+  @UiField 
+  TextBox town;
+
+  @UiField
+  TextBox street;
+
+  interface AddressEditorBinder extends UiBinder<HTMLPanel, AddressEditor> {
   }
 
-  AccountEditorUiBinder binder = GWT.create(AccountEditorUiBinder.class);
+  AddressEditorBinder binder = GWT.create(AddressEditorBinder.class);
 
-  @UiField
-  public TextBox email;
 
-  @UiField
-  public PasswordTextBox password;
-
-  @UiField
-  public AddressEditor addressEditor;
-
-  public AccountEditor() {
+  public AddressEditor() {
     initWidget(binder.createAndBindUi(this));
   }
 }

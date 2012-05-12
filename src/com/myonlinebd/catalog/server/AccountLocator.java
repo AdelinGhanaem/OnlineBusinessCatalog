@@ -2,6 +2,7 @@ package com.myonlinebd.catalog.server;
 
 import com.google.web.bindery.requestfactory.shared.Locator;
 import com.myonlinebd.catalog.server.domain.Account;
+import com.myonlinebd.catalog.server.domain.Response;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -13,6 +14,25 @@ public class AccountLocator extends Locator<Account, Long> {
 
   public AccountLocator(AccountService accountService) {
     service = accountService;
+  }
+
+  public AccountLocator() {
+    service = new AccountServiceImpl(new InMemoryAccountRepository(),new ResponseFactory() {
+      @Override
+      public Response invalidEmail() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+      }
+
+      @Override
+      public Response shortPassword() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+      }
+
+      @Override
+      public Response accountCreated() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+      }
+    });
   }
 
   @Override
