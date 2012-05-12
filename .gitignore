@@ -8,5 +8,5 @@ out/
 *.war
 *.ear
 onlineBD.iml
-
+war/Catalog/
 
