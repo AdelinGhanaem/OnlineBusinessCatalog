@@ -84,12 +84,10 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   //TODO:it seems like we have  to persist the object before then pass it to the editor  .... !
   @UiHandler("submit")
   public void onSubmit(ClickEvent event) {
-
     driver.flush();
     if (proxy.getAddress() != null) {
      Window.alert(proxy.getAddress().getStreet()  );
     }
-
     presenter.createAccount(context, proxy, new Receiver<ResponseProxy>() {
       @Override
       public void onSuccess(ResponseProxy response) {
