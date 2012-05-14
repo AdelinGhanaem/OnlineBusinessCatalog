@@ -19,25 +19,25 @@
 
   <inherits name="javax.validation.Validation"/>
 
+  <inherits name="com.google.gwt.activity.Activity"/>
 
-  <!--<super-source path="jre"/>-->
-<super-source path="jre"/>
+ <inherits name="com.google.gwt.inject.Inject"/>
 
   <!-- Specify the app entry point class.                   -->
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
   <!-- Inherit the core Web Toolkit stuff.                  -->
-  <replace-with class="com.myonlinebd.catalog.client.validation.ValidatorFactory">
-    <when-type-is class="javax.validation.ValidatorFactory"/>
-  </replace-with>
+  <!--<replace-with class="com.myonlinebd.catalog.client.validation.ValidatorFactory">   -->
+    <!--<when-type-is class="javax.validation.ValidatorFactory"/>-->
+  <!--</replace-with>-->
 
   <source path="shared"/>
 
   <source path="client"/>
 
-  <source path="jre"/>
+  <!--<source path="jre"/>-->
 
 
-  <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
+  <!--<entry-point class='com.myonlinebd.catalog.client.Catalog'/>-->
 
 
 
