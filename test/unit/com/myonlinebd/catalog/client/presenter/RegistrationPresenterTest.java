@@ -49,44 +49,7 @@ public class RegistrationPresenterTest {
   }
 
 
-  @Test
-  public void shouldNotifyUserWhenEmailIsInvalid() {
-    context.checking(new Expectations() {{
-      oneOf(view).invalidEmail();
-      never(accountContext).create(proxy).fire(receiver);
-    }});
-    proxy.setEmail("invalidEmail!!");
-    presenter.createAccount(accountContext, proxy, receiver);
-  }
-
-  @Test
-  public void tryWithAnotherInvalidEmail() {
-    context.checking(new Expectations() {{
-      oneOf(view).invalidEmail();
-      never(accountContext).create(proxy).fire(receiver);
-    }});
-    proxy.setEmail("AnotherInvalidEmail");
-    presenter.createAccount(accountContext, proxy, receiver);
-  }
 
 
-  @Test
-  public void emptyPasswordIsNotAllowed() {
-    context.checking(new Expectations() {{
-      oneOf(view).inValidPassword();
-      never(accountContext).create(proxy);
-    }});
-    proxy.setPassword("");
-    presenter.createAccount(accountContext, proxy, receiver);
-  }
 
-  @Test
-  public void passwordLessThanSixCharsIsNoAllowed() {
-    context.checking(new Expectations() {{
-      oneOf(view).inValidPassword();
-      never(accountContext).create(proxy);
-    }});
-    proxy.setPassword("123");
-    presenter.createAccount(accountContext, proxy, receiver);
-  }
 }
