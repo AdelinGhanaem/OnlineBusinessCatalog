@@ -27,7 +27,6 @@ public class RegistrationPresenterTest {
   final Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
     @Override
     public void onSuccess(ResponseProxy response) {
-
     }
   };
 
