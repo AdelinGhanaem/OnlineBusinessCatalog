@@ -49,6 +49,6 @@ public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
   @Override
   public void start(AcceptsOneWidget panel, EventBus eventBus) {
     view.setPresenter(this);
-      panel.setWidget(view.asWidget());
+    panel.setWidget(view.asWidget());
   }
 }
