@@ -73,6 +73,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     context = requestFactory.accountContext();
     //create the proxy
     proxy = context.create(AccountProxy.class);
+
     proxy.setAddress(context.create(AddressProxy.class));
     //return a mutable proxy
     proxy = context.edit(proxy);
@@ -86,7 +87,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   public void onSubmit(ClickEvent event) {
     driver.flush();
     if (proxy.getAddress() != null) {
-     Window.alert(proxy.getAddress().getStreet()  );
+     Window.alert(proxy.getAddress().getStreet());
     }
     presenter.createAccount(context, proxy, new Receiver<ResponseProxy>() {
       @Override
