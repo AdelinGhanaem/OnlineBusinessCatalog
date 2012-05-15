@@ -17,7 +17,7 @@ public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
   private AccountCreatorView view;
 
   @Inject
-  public AccountCreatorPresenterImpl( AccountCreatorView creatorView) {
+  public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
     view = creatorView;
   }
 

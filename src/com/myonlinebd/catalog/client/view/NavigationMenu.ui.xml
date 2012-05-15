@@ -2,6 +2,8 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
   <g:HTMLPanel>
     <g:MenuBar>
+      <g:MenuItem ui:field="home">Home
+      </g:MenuItem>
       <g:MenuItem ui:field="newAccount">
         New Account
       </g:MenuItem>

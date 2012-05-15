@@ -5,10 +5,13 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Command;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.MenuItem;
+import com.google.inject.Inject;
 import com.myonlinebd.catalog.client.place.AccountCreatorPlace;
+import com.myonlinebd.catalog.client.place.HomePlace;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -24,9 +27,12 @@ public class NavigationMenu extends Composite {
   MenuItem newAccount;
   @UiField
   MenuItem aboutUs;
+  @UiField
+  MenuItem home;
 
   private PlaceController placeController;
 
+  @Inject
   public NavigationMenu(PlaceController controller) {
     HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
     placeController = controller;
@@ -40,6 +46,7 @@ public class NavigationMenu extends Composite {
     newAccount.setCommand(new Command() {
       @Override
       public void execute() {
+        Window.alert("Aha !");
         placeController.goTo(new AccountCreatorPlace());
       }
     });
@@ -47,6 +54,7 @@ public class NavigationMenu extends Composite {
     search.setCommand(new Command() {
       @Override
       public void execute() {
+
       }
     });
 
@@ -54,6 +62,14 @@ public class NavigationMenu extends Composite {
       @Override
       public void execute() {
 
+      }
+    });
+
+
+    home.setCommand(new Command() {
+      @Override
+      public void execute() {
+        placeController.goTo(new HomePlace());
       }
     });
   }
