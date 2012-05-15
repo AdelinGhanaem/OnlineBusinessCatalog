@@ -3,15 +3,15 @@ package com.myonlinebd.catalog.client.presenter;
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.myonlinebd.catalog.client.view.MainAppView;
+import com.myonlinebd.catalog.client.view.HeaderView;
 
 /**
  * author webmaster1803@gmail.com
  */
 public class MainPresenter implements Activity {
-    MainAppView mainView;
+    HeaderView mainView;
 
-    public MainPresenter(MainAppView view) {
+    public MainPresenter(HeaderView view) {
         mainView = view;
     }
 
