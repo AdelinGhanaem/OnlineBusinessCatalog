@@ -21,6 +21,11 @@ public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
     view = creatorView;
   }
 
+  public AccountCreatorPresenterImpl() {
+
+
+  }
+
 
   @Override
   public void createAccount(BusinessCardsRequestFactory.AccountContext context, AccountProxy accountProxy, Receiver<ResponseProxy> receiver) {
