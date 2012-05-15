@@ -11,4 +11,6 @@ public interface AccountCreatorView {
     Widget asWidget();
 
     void setPresenter(AccountCreatorPresenter accountCreatorPresenter);
+
+  void disableSubmitButton();
 }
