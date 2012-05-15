@@ -6,14 +6,14 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.SimplePanel;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.SimpleLayoutPanel;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.place.AccountCreatorPlace;
 import com.myonlinebd.catalog.client.place.MainAppPlace;
 import com.myonlinebd.catalog.client.presenter.AppActivityMapper;
-import com.myonlinebd.catalog.client.presenter.MainPresenter;
 import com.myonlinebd.catalog.client.view.MainAppView;
 
 import java.util.HashMap;
@@ -38,7 +38,9 @@ public class Catalog implements EntryPoint {
 
         EventBus eventBus = new SimpleEventBus();
 
-        SimplePanel panel = new SimplePanel();
+        MainAppView appView = new MainAppView();
+
+        SimpleLayoutPanel panel = appView.getLayOutPanel();
 
         BusinessCardsRequestFactory businessCardsRequestFactory = GWT.create(BusinessCardsRequestFactory.class);
 
@@ -46,26 +48,20 @@ public class Catalog implements EntryPoint {
 
         AppActivityMapper mapper = new AppActivityMapper(new HashMap<String, Activity>());
 
-        mapper.addActivity(MainAppPlace.class.getName(), new MainPresenter(new MainAppView()));
-
-        MainAppView appView = new MainAppView();
-
         ActivityManager manager = new ActivityManager(mapper, eventBus);
 
         manager.setDisplay(panel);
-
 
         PlaceController placeController = new PlaceController(eventBus);
 
         ApplicationPlaceHistoryMapper placeHistoryMapper = GWT.create(ApplicationPlaceHistoryMapper.class);
 
-
         PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(placeHistoryMapper);
 
         historyHandler.register(placeController, eventBus, new MainAppPlace());
 
+        RootLayoutPanel.get().add(panel);
 
-        RootPanel.get().add(panel);
-        placeController.goTo(new MainAppPlace());
+        placeController.goTo(new AccountCreatorPlace());
     }
 }

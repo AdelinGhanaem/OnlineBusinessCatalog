@@ -3,10 +3,7 @@ package com.myonlinebd.catalog.client.view;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.HasWidgets;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.*;
 import com.myonlinebd.catalog.client.presenter.MainPresenter;
 
 /**
@@ -22,6 +19,8 @@ public class MainAppView extends Composite {
     private static MainAppViewUiBinder ourUiBinder = GWT.create(MainAppViewUiBinder.class);
     @UiField
     NavigationMenu navMenu;
+    @UiField
+    SimpleLayoutPanel mainPanel;
 
 
     public MainAppView() {
@@ -42,5 +41,9 @@ public class MainAppView extends Composite {
 
     public void addPresenter(MainPresenter mainPresenter) {
         presenter = mainPresenter;
+    }
+
+    public SimpleLayoutPanel getLayOutPanel() {
+        return mainPanel;
     }
 }
