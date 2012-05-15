@@ -26,7 +26,6 @@
   <!-- Specify the app entry point class.                   -->
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>
   <!-- Inherit the core Web Toolkit stuff.                  -->
-  <!--<replace-with class="com.myonlinebd.catalog.client.validation.ValidatorFactory">   -->
     <!--<when-type-is class="javax.validation.ValidatorFactory"/>-->
   <!--</replace-with>-->
 

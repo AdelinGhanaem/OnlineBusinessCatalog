@@ -1,10 +1,10 @@
-package com.myonlinebd.catalog;
+package com.myonlinebd.catalog.client;
 
 import com.google.gwt.core.client.GWT;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.web.bindery.event.shared.EventBus;
-import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 
 /**
  * author webmaster1803@gmail.com

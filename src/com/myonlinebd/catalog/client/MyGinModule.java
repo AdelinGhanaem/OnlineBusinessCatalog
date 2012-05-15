@@ -8,8 +8,7 @@ import com.google.inject.TypeLiteral;
 import com.google.inject.name.Names;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
-import com.myonlinebd.catalog.BusinessCardsRequestFactoryProvider;
-import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.presenter.AppActivityMapper;
 
 import java.util.HashMap;

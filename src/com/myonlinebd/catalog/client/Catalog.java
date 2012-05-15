@@ -10,11 +10,10 @@ import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.SimpleLayoutPanel;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
-import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
-import com.myonlinebd.catalog.client.place.AccountCreatorPlace;
 import com.myonlinebd.catalog.client.place.MainAppPlace;
 import com.myonlinebd.catalog.client.presenter.AppActivityMapper;
-import com.myonlinebd.catalog.client.view.MainAppView;
+import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.view.HeaderView;
 
 import java.util.HashMap;
 
@@ -23,45 +22,42 @@ import java.util.HashMap;
  */
 public class Catalog implements EntryPoint {
 
-    /**
-     * This is the entry point method.
-     */
-    public void onModuleLoad() {
-//        MyGinInjector injector = GWT.create(MyGinInjector.class);
+  /**
+   * This is the entry point method.
+   */
+  public void onModuleLoad() {
 
-//    BusinessCardsRequestFactory businessCardsRequestFactory = GWT.create(BusinessCardsRequestFactory.class);
-//    EventBus eventBus = new SimpleEventBus();
-//    businessCardsRequestFactory.initialize(eventBus);
-//    AccountCreatorPresenterImpl presenter = new AccountCreatorPresenterImpl(businessCardsRequestFactory, view);
-//    view.setPresenter(presenter);
-//    view.show(mainPanel);
+    EventBus eventBus = new SimpleEventBus();
 
-        EventBus eventBus = new SimpleEventBus();
 
-        MainAppView appView = new MainAppView();
+    SimpleLayoutPanel panel = new SimpleLayoutPanel();
 
-        SimpleLayoutPanel panel = appView.getLayOutPanel();
+    BusinessCardsRequestFactory businessCardsRequestFactory = GWT.create(BusinessCardsRequestFactory.class);
 
-        BusinessCardsRequestFactory businessCardsRequestFactory = GWT.create(BusinessCardsRequestFactory.class);
+    businessCardsRequestFactory.initialize(eventBus);
 
-        businessCardsRequestFactory.initialize(eventBus);
 
-        AppActivityMapper mapper = new AppActivityMapper(new HashMap<String, Activity>());
+    PlaceController placeController = new PlaceController(eventBus);
 
-        ActivityManager manager = new ActivityManager(mapper, eventBus);
 
-        manager.setDisplay(panel);
+    AppActivityMapper mapper = new AppActivityMapper(new HashMap<String, Activity>(), placeController);
 
-        PlaceController placeController = new PlaceController(eventBus);
+    ActivityManager manager = new ActivityManager(mapper, eventBus);
 
-        ApplicationPlaceHistoryMapper placeHistoryMapper = GWT.create(ApplicationPlaceHistoryMapper.class);
+    manager.setDisplay(panel);
 
-        PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(placeHistoryMapper);
+    ApplicationPlaceHistoryMapper placeHistoryMapper = GWT.create(ApplicationPlaceHistoryMapper.class);
 
-        historyHandler.register(placeController, eventBus, new MainAppPlace());
+    PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(placeHistoryMapper);
 
-        RootLayoutPanel.get().add(panel);
+    historyHandler.register(placeController, eventBus, new MainAppPlace());
 
-        placeController.goTo(new AccountCreatorPlace());
-    }
+    HeaderView appView = new HeaderView(placeController);
+
+    panel.add(appView);
+
+    RootLayoutPanel.get().add(panel);
+
+//        placeController.goTo(new AccountCreatorPlace());
+  }
 }

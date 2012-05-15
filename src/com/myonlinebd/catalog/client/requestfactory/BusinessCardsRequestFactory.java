@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.client.RequestFactory;
+package com.myonlinebd.catalog.client.requestfactory;
 
 import com.google.web.bindery.requestfactory.shared.Request;
 import com.google.web.bindery.requestfactory.shared.RequestContext;

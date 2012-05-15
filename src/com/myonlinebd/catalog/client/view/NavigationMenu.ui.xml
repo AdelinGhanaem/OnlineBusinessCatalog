@@ -2,11 +2,11 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
   <g:HTMLPanel>
     <g:MenuBar>
-      <g:MenuItem ui:field="Search">
-        Search
-      </g:MenuItem>
       <g:MenuItem ui:field="newAccount">
         New Account
+      </g:MenuItem>
+      <g:MenuItem ui:field="search">
+        Search
       </g:MenuItem>
       <g:MenuItem ui:field="aboutUs">About us
       </g:MenuItem>

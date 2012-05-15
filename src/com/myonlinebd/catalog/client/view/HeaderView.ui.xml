@@ -4,26 +4,16 @@
 
 
     <ui:style src="css/main.css"/>
-    <g:HTMLPanel>
+
+  <g:HTMLPanel>
         <div class="mainContainer">
             <div class="{style.head}">
                 <div class="{style.logo}">
-
                 </div>
                 <div class="{style.navigation}">
                     <myWidget:NavigationMenu ui:field="navMenu"/>
                 </div>
             </div>
-            <div class="body">
-                <div class="rightSide">
-                    <g:SimpleLayoutPanel ui:field="mainPanel">
-
-                    </g:SimpleLayoutPanel>
-                </div>
-                <div class="leftSide">
-                </div>
-            </div>
-            <div class="footer"></div>
         </div>
     </g:HTMLPanel>
 </ui:UiBinder>
