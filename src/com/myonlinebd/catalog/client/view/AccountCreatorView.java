@@ -1,5 +1,6 @@
 package com.myonlinebd.catalog.client.view;
 
+import com.google.gwt.user.client.ui.Widget;
 import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
 
 /**
@@ -7,8 +8,7 @@ import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
  */
 public interface AccountCreatorView {
 
+    Widget asWidget();
 
-
-
-  void setPresenter(AccountCreatorPresenter accountCreatorPresenter);
+    void setPresenter(AccountCreatorPresenter accountCreatorPresenter);
 }
