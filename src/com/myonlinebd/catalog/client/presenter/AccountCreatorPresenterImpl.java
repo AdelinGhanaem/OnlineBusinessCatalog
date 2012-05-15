@@ -14,13 +14,10 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
  */
 public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
 
-  private class Field {
-  }
-
   private AccountCreatorView view;
 
   @Inject
-  public AccountCreatorPresenterImpl(BusinessCardsRequestFactory requestFactory, AccountCreatorView creatorView) {
+  public AccountCreatorPresenterImpl( AccountCreatorView creatorView) {
     view = creatorView;
   }
 

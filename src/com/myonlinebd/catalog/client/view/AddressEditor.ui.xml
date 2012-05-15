@@ -2,7 +2,7 @@
              xmlns:b='urn:import:com.google.gwt.user.client.ui'>
 
   <b:HTMLPanel>
-    <b:div class="lable">Postal Code</b:div>
+    <div class="lable">Postal Code</div>
     <b:TextBox ui:field="postalCode"/>
     <b:Label>Town</b:Label>
     <b:TextBox ui:field="town"/>

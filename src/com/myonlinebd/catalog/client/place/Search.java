@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.client.presenter;
+package com.myonlinebd.catalog.client.place;
 
 import com.google.gwt.place.shared.Place;
 

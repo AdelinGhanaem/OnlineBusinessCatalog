@@ -3,9 +3,7 @@ package com.myonlinebd.catalog.client;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
-import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
-import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -14,14 +12,11 @@ import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
 public interface MyGinInjector extends Ginjector {
 
 
-  ActivityMapper activityMapper();
+    ActivityMapper activityMapper();
 
+    EventBus getEventBus();
 
-  PlaceController getPlaceController();
+//    AccountCreatorPresenter accountCreatorPresenter();
 
-
-  EventBus getEventBus();
-
-  AccountCreatorPresenter accountCreatorPresenter();
-
+//    AccountCreatorPresenter getAccountCreatorPresenter();
 }
