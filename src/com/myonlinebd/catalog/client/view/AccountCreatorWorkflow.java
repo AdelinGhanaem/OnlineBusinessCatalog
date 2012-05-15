@@ -6,11 +6,8 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DecoratorPanel;
-import com.google.gwt.user.client.ui.HasWidgets;
-import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.*;
+import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.RequestFactory.BusinessCardsRequestFactory;
@@ -61,6 +58,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   @UiField
   Label errorMessages;
 
+  @Inject
   public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory) {
 
     initWidget(binder.createAndBindUi(this));
@@ -101,17 +99,5 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   public void setPresenter(AccountCreatorPresenter accountCreatorPresenter) {
     presenter = accountCreatorPresenter;
   }
-
-  @Override
-  public void invalidEmail() {
-    errorMessages.setText("Invalid email ");
-  }
-
-  @Override
-  public void inValidPassword() {
-    errorMessages.setText("Invalid password, you password should be 6 chars length !");
-  }
-
-
 }
 

@@ -17,7 +17,7 @@ public class AccountCreatorPlace extends Place {
 
     @Override
     public String getToken(AccountCreatorPlace place) {
-      return this.getClass().toString();
+      return AccountCreatorPlace.class.toString();
     }
   }
 }

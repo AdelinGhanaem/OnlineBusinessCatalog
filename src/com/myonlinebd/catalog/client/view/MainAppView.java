@@ -7,34 +7,40 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
+import com.myonlinebd.catalog.client.presenter.MainPresenter;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
 public class MainAppView extends Composite {
-
-  interface MainAppViewUiBinder extends UiBinder<HTMLPanel, MainAppView> {
-  }
-
-  private static MainAppViewUiBinder ourUiBinder = GWT.create(MainAppViewUiBinder.class);
-  @UiField
-  NavigationMenu navMenu;
+    private MainPresenter presenter;
 
 
-  public MainAppView() {
-    HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
-    initWidget(rootElement);
-  }
+    interface MainAppViewUiBinder extends UiBinder<HTMLPanel, MainAppView> {
+    }
+
+    private static MainAppViewUiBinder ourUiBinder = GWT.create(MainAppViewUiBinder.class);
+    @UiField
+    NavigationMenu navMenu;
 
 
-  public void show(HasWidgets widgets) {
-    widgets.clear();
-    widgets.add(this);
-  }
+    public MainAppView() {
+        HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
+        initWidget(rootElement);
+    }
 
-  @Override
-  public Widget asWidget() {
 
-    return this;
-  }
+    public void show(HasWidgets widgets) {
+        widgets.clear();
+        widgets.add(this);
+    }
+
+    @Override
+    public Widget asWidget() {
+        return this;
+    }
+
+    public void addPresenter(MainPresenter mainPresenter) {
+        presenter = mainPresenter;
+    }
 }

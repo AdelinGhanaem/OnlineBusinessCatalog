@@ -24,6 +24,7 @@ public class AddressEditor extends Composite implements Editor<AddressProxy> {
   @UiField
   TextBox street;
 
+
   interface AddressEditorBinder extends UiBinder<HTMLPanel, AddressEditor> {
   }
 

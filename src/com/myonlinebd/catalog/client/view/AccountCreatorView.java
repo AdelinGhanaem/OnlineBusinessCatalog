@@ -7,10 +7,8 @@ import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
  */
 public interface AccountCreatorView {
 
-  void invalidEmail();
 
 
-  void inValidPassword();
 
   void setPresenter(AccountCreatorPresenter accountCreatorPresenter);
 }

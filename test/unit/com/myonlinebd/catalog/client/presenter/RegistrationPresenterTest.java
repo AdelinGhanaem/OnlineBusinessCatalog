@@ -23,7 +23,7 @@ public class RegistrationPresenterTest {
   private BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
   private BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
   private AccountCreatorView view = context.mock(AccountCreatorView.class);
-  private AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(requestFactory, view);
+  private AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl( view);
   final Receiver<ResponseProxy> receiver = new Receiver<ResponseProxy>() {
     @Override
     public void onSuccess(ResponseProxy response) {

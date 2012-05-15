@@ -5,6 +5,8 @@ import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
+import com.myonlinebd.catalog.client.place.MainAppPlace;
+import com.myonlinebd.catalog.client.view.MainAppView;
 
 import java.util.HashMap;
 
@@ -13,23 +15,28 @@ import java.util.HashMap;
  */
 public class AppActivityMapper implements ActivityMapper {
 
-  private HashMap<String, Activity> activityHashMap;
+    private HashMap<String, Activity> activityHashMap;
 
-  @Inject
-  public AppActivityMapper(@Named("activities")HashMap<String, Activity> map) {
-    activityHashMap = map;
-  }
+    @Inject
+    public AppActivityMapper(@Named("activities") HashMap<String, Activity> map) {
+        activityHashMap = map;
+    }
 
-  @Override
-  public Activity getActivity(Place place) {
-    return activityHashMap.get(place.getClass().toString());
-  }
 
-  public void addActivity(String activityKey, Activity activity) {
-    activityHashMap.put(activityKey, activity);
-  }
+    @Override
+    public Activity getActivity(Place place) {
+        if (place instanceof MainAppPlace) {
+            return new MainPresenter(new MainAppView());
+        }
+        return null;
+//    return activityHashMap.get(place.getClass().toString());
+    }
 
-  public void removeActivity(String newActivity) {
-    activityHashMap.remove(newActivity);
-  }
+    public void addActivity(String activityKey, Activity activity) {
+        activityHashMap.put(activityKey, activity);
+    }
+
+    public void removeActivity(String newActivity) {
+        activityHashMap.remove(newActivity);
+    }
 }
