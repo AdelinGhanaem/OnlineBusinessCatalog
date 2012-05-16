@@ -1,5 +1,6 @@
 package com.myonlinebd.catalog.client.presenter;
 
+import com.google.web.bindery.event.shared.EventBus;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import org.jmock.Expectations;
@@ -16,27 +17,29 @@ public class AccountCreatorPresenterTest {
 
   Mockery context = new Mockery();
 
-  BusinessCardsRequestFactory requestFactory = context.mock(BusinessCardsRequestFactory.class);
 
-  BusinessCardsRequestFactory.AccountContext accountContext = requestFactory.accountContext();
+  BusinessCardsRequestFactory.AccountContext accountContext = context.mock(BusinessCardsRequestFactory.AccountContext.class);
 
   AccountCreatorView view = context.mock(AccountCreatorView.class);
 
+  EventBus eventBus = context.mock(EventBus.class);
+
+  AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(view);
+
 
   @Test
-  public void shouldDisableButtonAndCreateNewAccount() {
-
+  public void shouldDisableCreateButtonAndFireContext() {
     context.checking(new Expectations() {{
-
       oneOf(view).disableSubmitButton();
-      oneOf(requestFactory).accountContext();
-      will(returnValue(accountContext));
-
+      oneOf(accountContext).fire();
     }});
-
-    AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl();
-
+    presenter.createAccount(accountContext);
   }
 
+
+  @Test
+  public void shouldFireNewAccountCreatedEvent() {
+
+  }
 
 }

@@ -3,11 +3,12 @@ package com.myonlinebd.catalog.client.presenter;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
-import com.google.web.bindery.requestfactory.shared.Receiver;
+import com.google.web.bindery.requestfactory.shared.RequestContext;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
-import com.myonlinebd.catalog.shared.entities.AccountProxy;
-import com.myonlinebd.catalog.shared.entities.ResponseProxy;
+
+import javax.validation.ConstraintViolation;
+import java.util.Set;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -15,21 +16,39 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
 
   private AccountCreatorView view;
+  private RequestContext context;
 
   @Inject
   public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
     view = creatorView;
   }
 
-  public AccountCreatorPresenterImpl() {
 
+  @Override
+  public void createAccount(BusinessCardsRequestFactory.AccountContext context) {
+    view.disableSubmitButton();
+    context.fire();
+  }
+
+  @Override
+  public void onAccountCreated() {
 
   }
 
 
   @Override
-  public void createAccount(BusinessCardsRequestFactory.AccountContext context, AccountProxy accountProxy, Receiver<ResponseProxy> receiver) {
-    context.create(accountProxy).fire(receiver);
+  public void onAccountValidationFailure(Set<ConstraintViolation<?>> violations) {
+    //To change body of implemented methods use File | Settings | File Templates.
+  }
+
+  @Override
+  public void onConnectionFailure() {
+
+  }
+
+
+  public void setUp() {
+
   }
 
 

@@ -9,17 +9,17 @@ import com.myonlinebd.catalog.server.domain.Response;
 public class ResponseLocator extends Locator<Response, Long> {
     @Override
     public Response create(Class<? extends Response> clazz) {
-        return new Response();
+        return  null;
     }
 
     @Override
     public Response find(Class<? extends Response> clazz, Long id) {
-        return new Response();
+        return null;
     }
 
     @Override
     public Class<Response> getDomainType() {
-        return Response.class;
+        return null;
     }
 
     @Override
