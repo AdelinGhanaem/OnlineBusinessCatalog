@@ -15,17 +15,15 @@ public interface AccountProxy extends EntityProxy {
 
   public void setPassword(String password);
 
-  public void setAddress(AddressProxy address);
-
-  public void setOwnerName(String ownerName);
-
-  public void setCompanyName(String companyName);
-
-  public void setActivityType(String activityType);
-
   public String getEmail();
 
   public String getPassword();
+
+  public void setAddress(AddressProxy address);
+
+//  public void setCompany(CompanyProxy companyProxy);
+
+//  public CompanyProxy getCompany();
 
   public AddressProxy getAddress();
 

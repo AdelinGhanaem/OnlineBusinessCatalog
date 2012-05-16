@@ -1,28 +1,29 @@
 package com.myonlinebd.catalog.server.domain;
 
+import java.util.List;
+
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
 public class Response {
 
 
-    private String responseMessage;
-
-    public Response(String message) {
-        responseMessage = message;
-    }
-
-    @SuppressWarnings("unused")
-    public Response() {
-
-    }
+  private List<String> errorMessageList;
 
 
-    public String getResponseMessage() {
-        return responseMessage;
-    }
+  public Response() {
 
-    public void setResponseMessage(String responseMessage) {
-        this.responseMessage = responseMessage;
-    }
+  }
+
+  public Response(List<String> errorMessages) {
+    errorMessageList = errorMessages;
+  }
+
+  public List<String> getErrorMessageList() {
+    return errorMessageList;
+  }
+
+  public void setErrorMessageList(List<String> errorMessageList) {
+    this.errorMessageList = errorMessageList;
+  }
 }

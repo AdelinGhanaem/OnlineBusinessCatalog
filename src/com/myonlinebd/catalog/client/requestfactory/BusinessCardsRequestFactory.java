@@ -15,6 +15,7 @@ import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 public interface BusinessCardsRequestFactory extends RequestFactory {
 
   @Service(value = AccountService.class, locator = MyServicesLocator.class)
+
   public interface AccountContext extends RequestContext {
 
     public Request<AccountProxy> getAccountById(Long id);

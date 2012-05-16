@@ -7,12 +7,17 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.HasWidgets;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
 import com.google.web.bindery.requestfactory.shared.Receiver;
-import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
+import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
 import com.myonlinebd.catalog.shared.entities.AddressProxy;
 import com.myonlinebd.catalog.shared.entities.ResponseProxy;
@@ -77,12 +82,22 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     proxy = context.create(AccountProxy.class);
 
     proxy.setAddress(context.create(AddressProxy.class));
+
+    context.create(proxy).to(new Receiver<ResponseProxy>() {
+
+
+      @Override
+      public void onSuccess(ResponseProxy response) {
+       Window.alert("So far so good !");
+      }
+    });
     //return a mutable proxy
     proxy = context.edit(proxy);
 
     //start drive the editor
     driver.edit(proxy, context);
   }
+
 
   //TODO:it seems like we have  to persist the object before then pass it to the editor  .... !
   @UiHandler("submit")
@@ -91,12 +106,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     if (proxy.getAddress() != null) {
       Window.alert(proxy.getAddress().getStreet());
     }
-    presenter.createAccount(context, proxy, new Receiver<ResponseProxy>() {
-      @Override
-      public void onSuccess(ResponseProxy response) {
-        Window.alert("So far so good !");
-      }
-    });
+    presenter.createAccount(context);
   }
 
 
@@ -107,6 +117,16 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
 
   public void setPresenter(AccountCreatorPresenter accountCreatorPresenter) {
     presenter = accountCreatorPresenter;
+  }
+
+  @Override
+  public void disableSubmitButton() {
+    //To change body of implemented methods use File | Settings | File Templates.
+  }
+
+  @Override
+  public void showMessage(String violationMessages) {
+    //To change body of implemented methods use File | Settings | File Templates.
   }
 }
 

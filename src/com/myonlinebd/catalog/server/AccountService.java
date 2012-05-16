@@ -10,9 +10,8 @@ import com.myonlinebd.catalog.server.domain.Response;
 
 public interface AccountService {
 
-  Account getAccountById(Long id);
 
-  public Response editAccount(Account account);
+
 
   public Response create(Account account);
 
