@@ -108,5 +108,10 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   public void setPresenter(AccountCreatorPresenter accountCreatorPresenter) {
     presenter = accountCreatorPresenter;
   }
+
+  @Override
+  public void disableSubmitButton() {
+
+  }
 }
 
