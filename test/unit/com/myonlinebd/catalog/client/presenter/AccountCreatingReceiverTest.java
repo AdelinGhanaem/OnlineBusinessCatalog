@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
 
 import javax.validation.ConstraintViolation;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -19,37 +18,67 @@ import java.util.Set;
 @RunWith(JMock.class)
 public class AccountCreatingReceiverTest {
 
-  Mockery mockery = new Mockery();
-
-  AccountCreatorPresenter presenter = mockery.mock(AccountCreatorPresenter.class);
-
-  AccountCreatorView view = mockery.mock(AccountCreatorView.class);
-
-  AccountCreatingReceiver receiver = new AccountCreatingReceiver(presenter);
+  Mockery context = new Mockery();
+  AccountCreatorView workflow = context.mock(AccountCreatorView.class);
+  AccountCreatingReceiver receiver = new AccountCreatingReceiver(workflow);
 
   @Test
-  public void shouldCallPresenterOnSuccess() {
-    mockery.checking(new Expectations() {{
-      oneOf(presenter).onAccountCreated();
+  public void shouldEnableCreateButtonAndGoToAccountSuccessfullyCreatedPage() {
+    context.checking(new Expectations() {{
+      oneOf(workflow).enableSubmitButton();
+      oneOf(workflow).gotAccountSuccessfullyCreatedPage();
     }});
     receiver.onSuccess(null);
   }
 
   @Test
-  public void shouldNotifyUserOfErrorOnConstraintViolation() {
-    final Set<ConstraintViolation<?>> violations = new HashSet<ConstraintViolation<?>>();
-    mockery.checking(new Expectations() {{
-      oneOf(presenter).onAccountValidationFailure(violations);
-    }});
-    receiver.onConstraintViolation(violations);
-  }
-
-  @Test
-  public void shouldCallPresenterOnFailure() {
-    mockery.checking(new Expectations() {{
-      oneOf(presenter).onConnectionFailure();
+  public void shouldGoToFailurePageOnFailure() {
+    context.checking(new Expectations() {{
+      oneOf(workflow).gotToFailurePage();
     }});
     receiver.onFailure(new ServerFailure());
+  }
+
+
+  @Test
+  public void shouldShowErrorOnConstraintViolation() {
+    final String message = "errorMeasdsadassage";
+    context.checking(new Expectations() {{
+      one(workflow).showMessage(message);
+    }});
+    receiver.onConstraintViolation(new HashSet<ConstraintViolation<?>>() {{
+      add(new TestConstraintViolation() {
+        @Override
+        public String getMessage() {
+          return message;
+        }
+      });
+    }});
+  }
+
+
+  @Test
+  public void tryWithMoreThanOneConstraintViolation() {
+    final String invalidEmail = "invalid Message";
+    final String invalidPassword = "bla bla brrr";
+    context.checking(new Expectations() {{
+      oneOf(workflow).showMessage(invalidEmail);
+      oneOf(workflow).showMessage(invalidPassword);
+    }});
+    receiver.onConstraintViolation(new HashSet<ConstraintViolation<?>>() {{
+      add(new TestConstraintViolation() {
+        @Override
+        public String getMessage() {
+          return invalidEmail;
+        }
+      });
+      add(new TestConstraintViolation() {
+        @Override
+        public String getMessage() {
+          return invalidPassword;
+        }
+      });
+    }});
   }
 
 

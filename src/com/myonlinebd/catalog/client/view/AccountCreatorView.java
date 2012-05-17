@@ -15,4 +15,12 @@ public interface AccountCreatorView {
   void disableSubmitButton();
 
   void showMessage(String violationMessages);
+
+  void enableSubmitButton();
+
+  void gotAccountSuccessfullyCreatedPage();
+
+  void gotToFailurePage();
+
+  void clearNotificationMessage();
 }

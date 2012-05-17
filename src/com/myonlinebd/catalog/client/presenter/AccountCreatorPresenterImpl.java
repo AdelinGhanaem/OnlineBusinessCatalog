@@ -2,27 +2,31 @@ package com.myonlinebd.catalog.client.presenter;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.google.inject.Inject;
-import com.google.web.bindery.requestfactory.shared.RequestContext;
+import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
-
-import javax.validation.ConstraintViolation;
-import java.util.Set;
+import com.myonlinebd.catalog.shared.entities.AccountProxy;
+import com.myonlinebd.catalog.shared.entities.AddressProxy;
+import com.myonlinebd.catalog.shared.entities.CompanyProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
+public class AccountCreatorPresenterImpl extends AbstractActivity implements AccountCreatorPresenter {
 
   private AccountCreatorView view;
-  private RequestContext context;
+  private BusinessCardsRequestFactory.AccountContext accountRequestContext;
 
-  @Inject
-  public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
-    view = creatorView;
+//  @Inject
+//  public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
+//    view = creatorView;
+//
+//  }
+
+  public AccountCreatorPresenterImpl(AccountCreatorView view, BusinessCardsRequestFactory.AccountContext accountContext) {
+    this.view = view;
+    this.accountRequestContext = accountContext;
   }
-
 
   @Override
   public void createAccount(BusinessCardsRequestFactory.AccountContext context) {
@@ -31,44 +35,30 @@ public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
   }
 
   @Override
-  public void onAccountCreated() {
-
-  }
-
-
-  @Override
-  public void onAccountValidationFailure(Set<ConstraintViolation<?>> violations) {
-    //To change body of implemented methods use File | Settings | File Templates.
+  public void onEditing() {
+    view.clearNotificationMessage();
   }
 
   @Override
-  public void onConnectionFailure() {
-
-  }
-
-
-  public void setUp() {
-
-  }
-
-
-  //TODO:Eliminate the if else statement from the createAccountFunction !!!
-  //TODO: DON'T FORGET TO READ ABOUT VALIDATION, AND HOW TO VALIDATE Editors fields
-
-  @Override
-  public String mayStop() {
-    return null;  //To change body of implemented methods use File | Settings | File Templates.
+  public AccountProxy getAccountProxy() {
+    AccountProxy proxy = accountRequestContext.create(AccountProxy.class);
+    AddressProxy addressProxy = accountRequestContext.create(AddressProxy.class);
+    CompanyProxy companyProxy = accountRequestContext.create(CompanyProxy.class);
+    proxy.setAddress(addressProxy);
+    proxy.setCompany(companyProxy);
+    return proxy;
   }
 
   @Override
-  public void onCancel() {
-    //To change body of implemented methods use File | Settings | File Templates.
+  public void willCreate(AccountProxy proxy, Receiver<Void> receiver) {
+    accountRequestContext.create(proxy).to(receiver);
   }
 
   @Override
-  public void onStop() {
-    //To change body of implemented methods use File | Settings | File Templates.
+  public BusinessCardsRequestFactory.AccountContext getAccountContext() {
+    return accountRequestContext;
   }
+
 
   @Override
   public void start(AcceptsOneWidget panel, EventBus eventBus) {

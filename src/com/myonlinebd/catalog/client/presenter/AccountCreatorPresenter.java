@@ -1,21 +1,21 @@
 package com.myonlinebd.catalog.client.presenter;
 
-import com.google.gwt.activity.shared.Activity;
+import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
-
-import javax.validation.ConstraintViolation;
-import java.util.Set;
+import com.myonlinebd.catalog.shared.entities.AccountProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public interface AccountCreatorPresenter extends Activity {
+public interface AccountCreatorPresenter {
 
   void createAccount(BusinessCardsRequestFactory.AccountContext context);
 
-  void onAccountCreated();
+  void onEditing();
 
-  void onAccountValidationFailure(Set<ConstraintViolation<?>> violations);
+  AccountProxy getAccountProxy();
 
-  void onConnectionFailure();
+  void willCreate(AccountProxy proxy, Receiver<Void> receiver);
+
+  BusinessCardsRequestFactory.AccountContext getAccountContext();
 }

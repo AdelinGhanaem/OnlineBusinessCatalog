@@ -1,7 +1,6 @@
 package com.myonlinebd.catalog.server;
 
 import com.myonlinebd.catalog.server.domain.Account;
-import com.myonlinebd.catalog.server.domain.Response;
 
 
 /**
@@ -13,6 +12,6 @@ public interface AccountService {
 
 
 
-  public Response create(Account account);
+  public void create(Account account);
 
 }
