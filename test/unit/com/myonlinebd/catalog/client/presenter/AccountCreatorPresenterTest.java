@@ -1,6 +1,5 @@
 package com.myonlinebd.catalog.client.presenter;
 
-import com.google.web.bindery.event.shared.EventBus;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import org.jmock.Expectations;
@@ -22,7 +21,6 @@ public class AccountCreatorPresenterTest {
 
   AccountCreatorView view = context.mock(AccountCreatorView.class);
 
-  EventBus eventBus = context.mock(EventBus.class);
 
   AccountCreatorPresenter presenter = new AccountCreatorPresenterImpl(view);
 
@@ -38,8 +36,10 @@ public class AccountCreatorPresenterTest {
 
 
   @Test
-  public void shouldFireNewAccountCreatedEvent() {
+  public void shouldEnableCreateButtonAndGoToAccountCreatedPlace() {
+    context.checking(new Expectations() {{
 
+    }});
   }
 
 }
