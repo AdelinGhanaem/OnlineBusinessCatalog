@@ -1,7 +1,5 @@
 package com.myonlinebd.catalog.server.domain;
 
-import javax.validation.constraints.NotNull;
-
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
@@ -14,16 +12,22 @@ public class Account {
 
   private String password;
 
-  @NotNull
   private Address address = new Address();
-  @NotNull
+
   private Company company;
-//  private String companyName;
-//  private String ownerName;
-//  private String activityType;
 
 
   public Account() {
+  }
+
+  public Company getCompany() {
+    return company;
+  }
+
+  public void setCompany(Company company) {
+
+    this.company = company;
+
   }
 
   public Long getId() {
@@ -39,9 +43,7 @@ public class Account {
   }
 
 
-  public Company getCompany() {
-    return company;
-  }
+
 
   public Address getAddress() {
     return address;
@@ -63,10 +65,5 @@ public class Account {
   public void setAddress(Address address) {
     this.address = address;
   }
-
-  public void setCompany(Company company) {
-    this.company = company;
-  }
-
 
 }

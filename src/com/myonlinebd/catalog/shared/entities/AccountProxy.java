@@ -21,11 +21,11 @@ public interface AccountProxy extends EntityProxy {
 
   public void setAddress(AddressProxy address);
 
-//  public void setCompany(CompanyProxy companyProxy);
-
-//  public CompanyProxy getCompany();
+  public void setCompany(CompanyProxy company);
 
   public AddressProxy getAddress();
+
+  public CompanyProxy getCompany();
 
 
 }

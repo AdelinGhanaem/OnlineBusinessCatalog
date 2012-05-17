@@ -7,7 +7,6 @@ import com.google.web.bindery.requestfactory.shared.Service;
 import com.myonlinebd.catalog.server.AccountService;
 import com.myonlinebd.catalog.server.MyServicesLocator;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
-import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -18,13 +17,9 @@ public interface BusinessCardsRequestFactory extends RequestFactory {
 
   public interface AccountContext extends RequestContext {
 
-    public Request<AccountProxy> getAccountById(Long id);
+    public Request<Void> create(AccountProxy accountProxy);
 
-    public Request<ResponseProxy> editAccount(AccountProxy accountProxy);
-
-    public Request<ResponseProxy> create(AccountProxy accountProxy);
   }
-
   AccountContext accountContext();
 
 }
