@@ -8,19 +8,20 @@ import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.inject.Inject;
 
 /**
- * @author Adelin Ghanayem adelin.ghanaem@clouway.com
+ * author webmaster1803@gmail.com
  */
-public class FailurePage extends Composite {
+public class AccountSuccessfullyCreatedView extends Composite {
 
-    interface FailurePageUiBinder extends UiBinder<HTMLPanel, FailurePage> {
+    interface AccountSuccessfullyCreatedUiBinder extends UiBinder<HTMLPanel, AccountSuccessfullyCreatedView> {
     }
 
-    private static FailurePageUiBinder ourUiBinder = GWT.create(FailurePageUiBinder.class);
+
+    private static AccountSuccessfullyCreatedUiBinder ourUiBinder = GWT.create(AccountSuccessfullyCreatedUiBinder.class);
 
     @UiField(provided = true)
     HeaderView header;
     @Inject
-    public FailurePage(HeaderView headerView) {
+    public AccountSuccessfullyCreatedView(HeaderView headerView) {
         header = headerView;
         HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
         initWidget(rootElement);

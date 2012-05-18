@@ -3,7 +3,6 @@
              xmlns:myWidgect='urn:import:com.myonlinebd.catalog.client.view'
         >
 
-
   <g:HTMLPanel>
     <myWidgect:HeaderView ui:field="header">
 

@@ -21,7 +21,7 @@ public class AccountCreatingReceiver extends Receiver<Void> {
   @Override
   public void onSuccess(Void response) {
     view.enableSubmitButton();
-    view.gotAccountSuccessfullyCreatedPage();
+    view.showSuccessNotification();
   }
 
   @Override
@@ -33,7 +33,7 @@ public class AccountCreatingReceiver extends Receiver<Void> {
 
   @Override
   public void onFailure(ServerFailure error) {
-    view.gotToFailurePage();
+    view.showFailureNotification();
   }
 
 

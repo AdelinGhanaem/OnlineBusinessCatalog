@@ -40,7 +40,7 @@ public class Catalog implements EntryPoint {
 
     PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(placeHistoryMapper);
 
-    historyHandler.register(placeController, eventBus, new MainAppPlace());
+    historyHandler.register(placeController, eventBus,new HomePlace());
 
     HeaderView appView = new HeaderView(placeController);
 

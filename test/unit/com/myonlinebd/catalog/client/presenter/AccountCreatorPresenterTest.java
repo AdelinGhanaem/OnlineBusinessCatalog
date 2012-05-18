@@ -207,10 +207,10 @@ public class AccountCreatorPresenterTest {
         //To change body of implemented methods use File | Settings | File Templates.
       }
 
-      @Override
-      public EntityProxyId<?> stableId() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-      }
+//      @Override
+//      public EntityProxyId<?> stableId() {
+//        return null;  //To change body of implemented methods use File | Settings | File Templates.
+//      }
     };
   }
 }

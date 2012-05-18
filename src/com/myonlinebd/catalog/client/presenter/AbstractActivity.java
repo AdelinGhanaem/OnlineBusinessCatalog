@@ -26,7 +26,5 @@ public abstract  class AbstractActivity implements Activity{
   }
 
   @Override
-  public void start(AcceptsOneWidget panel, EventBus eventBus) {
-    //To change body of implemented methods use File | Settings | File Templates.
-  }
+  public abstract void start(AcceptsOneWidget panel, EventBus eventBus);
 }

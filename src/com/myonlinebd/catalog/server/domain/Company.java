@@ -7,28 +7,29 @@ package com.myonlinebd.catalog.server.domain;
 public class Company {
 
 
-  private String companyName;
+    private String companyName;
 
-  private Long id;
+    private Long id;
 
-  public String getCompanyName() {
-    return companyName;
-  }
+//    public Company() {
+//    }
 
-  public void setCompanyName(String companyName) {
-    this.companyName = companyName;
-  }
+    public String getCompanyName() {
+        return companyName;
+    }
 
-  public Long getId() {
-    return id;
-  }
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
-
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public Long getId() {
+        return id;
+    }
 
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 
 }

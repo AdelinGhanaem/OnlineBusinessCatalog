@@ -13,6 +13,7 @@
         <b:Label ui:field="errorMessages" text=""/>
       </b:HTMLPanel>
     </b:DecoratorPanel>
+
   </b:HTMLPanel>
 
 

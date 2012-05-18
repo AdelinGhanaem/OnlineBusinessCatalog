@@ -7,7 +7,7 @@ import com.google.web.bindery.event.shared.EventBus;
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class InjectablePlaceController extends PlaceController{
+public class InjectablePlaceController extends PlaceController {
   
   @Inject
   public InjectablePlaceController(EventBus eventBus) {
