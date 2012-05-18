@@ -131,6 +131,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
 
   @Override
   public void disableSubmitButton() {
+
     submit.setEnabled(false);
   }
 
@@ -158,6 +159,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   @Override
   public void clearNotificationMessage() {
     errorMessages.setText("");
+
   }
 }
 
