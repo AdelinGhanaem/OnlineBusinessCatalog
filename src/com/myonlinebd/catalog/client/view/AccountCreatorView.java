@@ -8,9 +8,19 @@ import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
  */
 public interface AccountCreatorView {
 
-    Widget asWidget();
+  Widget asWidget();
 
-    void setPresenter(AccountCreatorPresenter accountCreatorPresenter);
+  void setPresenter(AccountCreatorPresenter accountCreatorPresenter);
 
   void disableSubmitButton();
+
+  void showMessage(String violationMessages);
+
+  void enableSubmitButton();
+
+  void gotAccountSuccessfullyCreatedPage();
+
+  void gotToFailurePage();
+
+  void clearNotificationMessage();
 }
