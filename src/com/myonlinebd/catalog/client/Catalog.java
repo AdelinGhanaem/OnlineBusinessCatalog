@@ -9,7 +9,6 @@ import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.SimpleLayoutPanel;
 import com.google.web.bindery.event.shared.EventBus;
 import com.myonlinebd.catalog.client.place.HomePlace;
-import com.myonlinebd.catalog.client.place.MainAppPlace;
 import com.myonlinebd.catalog.client.presenter.AppActivityMapper;
 import com.myonlinebd.catalog.client.view.HeaderView;
 
