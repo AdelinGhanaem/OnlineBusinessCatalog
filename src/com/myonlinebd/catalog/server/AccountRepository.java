@@ -9,6 +9,4 @@ public interface AccountRepository {
 
   Account getAccountById(Long email);
 
-
-  void createAccount(Account account);
 }

@@ -6,19 +6,16 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
-import com.myonlinebd.catalog.client.place.AccountSuccessfullyCreatedPlace;
-import com.myonlinebd.catalog.client.place.FailurePage;
-import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
-import com.myonlinebd.catalog.client.receiver.AccountCreatingReceiver;
+import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
+import com.myonlinebd.catalog.shared.entities.AddressProxy;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
 
 /**
@@ -30,8 +27,13 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   AccountCreatorWorkflowBinder binder = GWT.create(AccountCreatorWorkflowBinder.class);
 
 
-  interface AccountCreatorWorkflowBinder extends UiBinder<HTMLPanel, AccountCreatorWorkflow> {
+  public void show(HasWidgets hasWidgets) {
+    hasWidgets.clear();
+    hasWidgets.add(this.asWidget());
+  }
 
+
+  interface AccountCreatorWorkflowBinder extends UiBinder<HTMLPanel, AccountCreatorWorkflow> {
   }
 
 
@@ -41,66 +43,40 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
 
   private Driver driver;
 
-  BusinessCardsRequestFactory.AccountContext context;
 
+  private AccountCreatorPresenter presenter;
+
+  BusinessCardsRequestFactory.AccountContext context;
 
   @UiField()
   AccountEditor accountEditor;
 
-
   AccountProxy proxy;
-
-
-  AccountCreatorPresenter presenter;
 
   @UiField
   Button submit;
 
-
   @UiField
   Label errorMessages;
-
 
   @UiField(provided = true)
   HeaderView header;
 
-
-  PlaceController placeController;
-
   @Inject
-  public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory, PlaceController controller, AccountCreatorPresenter accountCreatorPresenter) {
-    //TODO:ALLOOOO DI .... !! kakvo pravim ?
+  public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory, PlaceController controller) {
     header = new HeaderView(controller);
-    placeController = controller;
-    presenter = accountCreatorPresenter;
-
     initWidget(binder.createAndBindUi(this));
 
     driver = GWT.create(Driver.class);
     //initialize the drive with factory and account editor
     driver.initialize(requestFactory, accountEditor);
 
-    //--!!--save the proxy on the server
+    //save the proxy on the server
+    context = requestFactory.accountContext();
+    //create the proxy
+    proxy = context.create(AccountProxy.class);
 
-//    context = requestFactory.accountContext();
-    context = presenter.getAccountContext();
-
-    //--!!--create the proxy
-//    proxy = context.create(AccountProxy.class);
-
-    proxy = presenter.getAccountProxy();
-    //--!!--
-//    proxy.setAddress(context.create(AddressProxy.class));
-
-    //--!!-- Call in some of the presenter methods !!
-//    context.create(proxy).to(new Receiver<Void>() {
-//      @Override
-//      public void onSuccess(Void aVoid) {
-//        Window.alert("So far so good !");
-//      }
-//    });
-    presenter.willCreate(proxy, new AccountCreatingReceiver(this));
-
+    proxy.setAddress(context.create(AddressProxy.class));
     //return a mutable proxy
     proxy = context.edit(proxy);
 
@@ -108,15 +84,19 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     driver.edit(proxy, context);
   }
 
-
   //TODO:it seems like we have  to persist the object before then pass it to the editor  .... !
   @UiHandler("submit")
   public void onSubmit(ClickEvent event) {
     driver.flush();
     if (proxy.getAddress() != null) {
-//      Window.alert(proxy.getAddress().getStreet());
+      Window.alert(proxy.getAddress().getStreet());
     }
-    presenter.createAccount(context);
+    presenter.createAccount(context, proxy, new Receiver<ResponseProxy>() {
+      @Override
+      public void onSuccess(ResponseProxy response) {
+        Window.alert("So far so good !");
+      }
+    });
   }
 
 
@@ -158,6 +138,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
   @Override
   public void clearNotificationMessage() {
     errorMessages.setText("");
+
   }
 }
 

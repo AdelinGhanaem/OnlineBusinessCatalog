@@ -18,13 +18,6 @@ public class InMemoryAccountRepository implements AccountRepository {
     return null;
   }
 
-
-
-  @Override
-  public void createAccount(Account account) {
-    //To change body of implemented methods use File | Settings | File Templates.
-  }
-
   private class InMemoryAccount {
     Long id;
     String email;
