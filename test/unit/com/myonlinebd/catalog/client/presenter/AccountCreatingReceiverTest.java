@@ -26,7 +26,7 @@ public class AccountCreatingReceiverTest {
   public void shouldEnableCreateButtonAndGoToAccountSuccessfullyCreatedPage() {
     context.checking(new Expectations() {{
       oneOf(workflow).enableSubmitButton();
-      oneOf(workflow).gotAccountSuccessfullyCreatedPage();
+      oneOf(workflow).showSuccessNotification();
     }});
     receiver.onSuccess(null);
   }
@@ -34,7 +34,7 @@ public class AccountCreatingReceiverTest {
   @Test
   public void shouldGoToFailurePageOnFailure() {
     context.checking(new Expectations() {{
-      oneOf(workflow).gotToFailurePage();
+      oneOf(workflow).showFailureNotification();
     }});
     receiver.onFailure(new ServerFailure());
   }

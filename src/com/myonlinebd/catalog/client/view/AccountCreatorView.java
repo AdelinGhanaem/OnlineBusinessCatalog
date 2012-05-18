@@ -18,9 +18,9 @@ public interface AccountCreatorView {
 
   void enableSubmitButton();
 
-  void gotAccountSuccessfullyCreatedPage();
+  void showSuccessNotification();
 
-  void gotToFailurePage();
+  void showFailureNotification();
 
   void clearNotificationMessage();
 }

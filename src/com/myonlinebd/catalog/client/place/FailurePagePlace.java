@@ -6,7 +6,7 @@ import com.google.gwt.place.shared.PlaceTokenizer;
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AboutUsPlace extends Place {
+public class FailurePagePlace extends Place {
 
   public static class Tokenizer implements PlaceTokenizer<AccountCreatorPlace> {
 
@@ -17,7 +17,7 @@ public class AboutUsPlace extends Place {
 
     @Override
     public String getToken(AccountCreatorPlace place) {
-      return "aboutUs";
+      return "error";
     }
   }
 }

@@ -3,7 +3,7 @@
              xmlns:myWidget='urn:import:com.myonlinebd.catalog.client.view'>
 
 
-    <ui:style src="css/main.css"/>
+    <ui:style src="resources/css/main.css"/>
 
   <g:HTMLPanel>
         <div class="mainContainer">
