@@ -1,6 +1,5 @@
 package com.myonlinebd.catalog.client;
 
-import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
 import com.google.gwt.place.shared.PlaceController;
@@ -21,11 +20,6 @@ public interface MyGinInjector extends Ginjector {
 
   AccountCreatorView accountCreatorView();
 
-
   PlaceController placeController();
-
-  Activity accountCreatorPresenter();
-
-  Activity HomePresenter();
 
 }

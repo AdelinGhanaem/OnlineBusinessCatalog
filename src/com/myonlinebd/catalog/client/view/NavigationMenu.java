@@ -5,7 +5,6 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.MenuItem;
@@ -46,7 +45,6 @@ public class NavigationMenu extends Composite {
     newAccount.setCommand(new Command() {
       @Override
       public void execute() {
-        Window.alert("Aha !");
         placeController.goTo(new AccountCreatorPlace());
       }
     });

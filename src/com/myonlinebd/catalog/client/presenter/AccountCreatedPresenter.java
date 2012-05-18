@@ -2,6 +2,7 @@ package com.myonlinebd.catalog.client.presenter;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
 import com.myonlinebd.catalog.client.view.AccountSuccessfullyCreatedView;
 
 /**
@@ -9,17 +10,16 @@ import com.myonlinebd.catalog.client.view.AccountSuccessfullyCreatedView;
  */
 public class AccountCreatedPresenter extends AbstractActivity {
 
-    private AccountSuccessfullyCreatedView view;
+  private AccountSuccessfullyCreatedView view;
 
-    public AccountCreatedPresenter(AccountSuccessfullyCreatedView view) {
-        this.view = view;
-    }
+  @Inject
+  public AccountCreatedPresenter(AccountSuccessfullyCreatedView view) {
+    this.view = view;
+  }
 
 
-
-
-    @Override
-    public void start(AcceptsOneWidget panel, EventBus eventBus) {
-        panel.setWidget(view);
-    }
+  @Override
+  public void start(AcceptsOneWidget panel, EventBus eventBus) {
+    panel.setWidget(view);
+  }
 }

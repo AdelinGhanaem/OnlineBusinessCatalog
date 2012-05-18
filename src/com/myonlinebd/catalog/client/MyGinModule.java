@@ -33,7 +33,6 @@ public class MyGinModule extends AbstractGinModule {
 
         bind(PlaceController.class).to(InjectablePlaceController.class);
 
-//        bind(BusinessCardsRequestFactory.AccountContext.class);
 
     }
 
@@ -42,5 +41,5 @@ public class MyGinModule extends AbstractGinModule {
     BusinessCardsRequestFactory.AccountContext getAccountContext(BusinessCardsRequestFactory factory) {
         return factory.accountContext();
     }
-    //TODO:Un able to bind the AccountCreatorView because of AddressEditor ... !
+
 }

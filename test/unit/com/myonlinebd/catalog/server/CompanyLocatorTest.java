@@ -1,6 +1,7 @@
 package com.myonlinebd.catalog.server;
 
 import com.myonlinebd.catalog.server.domain.Company;
+import org.hamcrest.CoreMatchers;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
@@ -19,7 +20,7 @@ public class CompanyLocatorTest {
     @Test
     public void shouldReturnNewCompanyObject() {
         Company company = companyLocator.create(Company.class);
-        assertThat(company, is(notNullValue()));
+        assertThat(company, CoreMatchers.is(notNullValue()));
     }
 
     @Test

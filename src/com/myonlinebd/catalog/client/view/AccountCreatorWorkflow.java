@@ -6,9 +6,15 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
+import com.myonlinebd.catalog.client.place.AccountSuccessfullyCreatedPlace;
+import com.myonlinebd.catalog.client.place.FailurePagePlace;
 import com.myonlinebd.catalog.client.presenter.AccountCreatorPresenter;
 import com.myonlinebd.catalog.client.receiver.AccountCreatingReceiver;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
@@ -143,14 +149,14 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     }
 
     @Override
-    public void showSuccessNotification() {
+    public void gotToSunccessPage() {
 
-//        placeController.goTo(new AccountSuccessfullyCreatedPlace());
+        placeController.goTo(new AccountSuccessfullyCreatedPlace());
     }
 
     @Override
-    public void showFailureNotification() {
-//        placeController.goTo(new FailurePagePlace());
+    public void gotToFailurePage() {
+        placeController.goTo(new FailurePagePlace());
     }
 
   @Override
