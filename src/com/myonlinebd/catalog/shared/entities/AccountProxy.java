@@ -30,5 +30,4 @@ public interface AccountProxy extends EntityProxy {
   public AddressProxy getAddress();
 
 
-    void setCompany(CompanyProxy companyProxy);
 }

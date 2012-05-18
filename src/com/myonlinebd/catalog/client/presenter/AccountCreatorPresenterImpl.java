@@ -2,63 +2,54 @@ package com.myonlinebd.catalog.client.presenter;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.view.AccountCreatorView;
 import com.myonlinebd.catalog.shared.entities.AccountProxy;
-import com.myonlinebd.catalog.shared.entities.AddressProxy;
-import com.myonlinebd.catalog.shared.entities.CompanyProxy;
+import com.myonlinebd.catalog.shared.entities.ResponseProxy;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
-public class AccountCreatorPresenterImpl extends AbstractActivity implements AccountCreatorPresenter {
+public class AccountCreatorPresenterImpl implements AccountCreatorPresenter {
 
   private AccountCreatorView view;
-  private BusinessCardsRequestFactory.AccountContext accountRequestContext;
 
-//  @Inject
-//  public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
-//    view = creatorView;
-//
-//  }
+  @Inject
+  public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
+    view = creatorView;
+  }
 
-  public AccountCreatorPresenterImpl(AccountCreatorView view, BusinessCardsRequestFactory.AccountContext accountContext) {
-    this.view = view;
-    this.accountRequestContext = accountContext;
+  public AccountCreatorPresenterImpl() {
+
+
+  }
+
+
+  @Override
+  public void createAccount(BusinessCardsRequestFactory.AccountContext context, AccountProxy accountProxy, Receiver<ResponseProxy> receiver) {
+    context.create(accountProxy).fire(receiver);
+  }
+
+
+  //TODO:Eliminate the if else statement from the createAccountFunction !!!
+  //TODO: DON'T FORGET TO READ ABOUT VALIDATION, AND HOW TO VALIDATE Editors fields
+
+  @Override
+  public String mayStop() {
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
   }
 
   @Override
-  public void createAccount(BusinessCardsRequestFactory.AccountContext context) {
-    view.disableSubmitButton();
-    context.fire();
+  public void onCancel() {
+    //To change body of implemented methods use File | Settings | File Templates.
   }
 
   @Override
-  public void onEditing() {
-    view.clearNotificationMessage();
+  public void onStop() {
+    //To change body of implemented methods use File | Settings | File Templates.
   }
-
-  @Override
-  public AccountProxy getAccountProxy() {
-    AccountProxy proxy = accountRequestContext.create(AccountProxy.class);
-    AddressProxy addressProxy = accountRequestContext.create(AddressProxy.class);
-    CompanyProxy companyProxy = accountRequestContext.create(CompanyProxy.class);
-    proxy.setAddress(addressProxy);
-    proxy.setCompany(companyProxy);
-    return proxy;
-  }
-
-  @Override
-  public void willCreate(AccountProxy proxy, Receiver<Void> receiver) {
-    accountRequestContext.create(proxy).to(receiver);
-  }
-
-  @Override
-  public BusinessCardsRequestFactory.AccountContext getAccountContext() {
-    return accountRequestContext;
-  }
-
 
   @Override
   public void start(AcceptsOneWidget panel, EventBus eventBus) {

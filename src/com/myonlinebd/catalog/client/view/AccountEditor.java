@@ -33,7 +33,4 @@ public class AccountEditor extends Composite implements Editor<AccountProxy> {
   public AccountEditor() {
     initWidget(binder.createAndBindUi(this));
   }
-
-
-
 }
