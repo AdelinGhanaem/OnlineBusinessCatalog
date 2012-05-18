@@ -18,11 +18,7 @@ public class AccountCreatorPresenterImpl extends AbstractActivity implements Acc
     private AccountCreatorView view;
     private BusinessCardsRequestFactory.AccountContext accountRequestContext;
 
-    //  @Inject
-//  public AccountCreatorPresenterImpl(AccountCreatorView creatorView) {
-//    view = creatorView;
-//
-//  }
+
     @Inject
     public AccountCreatorPresenterImpl(AccountCreatorView view, BusinessCardsRequestFactory.AccountContext accountContext) {
         this.view = view;
