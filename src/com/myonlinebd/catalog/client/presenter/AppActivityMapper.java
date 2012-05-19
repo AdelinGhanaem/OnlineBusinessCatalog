@@ -34,13 +34,16 @@ public class AppActivityMapper implements ActivityMapper {
 
     @Inject
     FailurePage page;
+    
+    @Inject
+    BusinessCardsRequestFactory factory;
 
     @Override
     public Activity getActivity(Place place) {
         //i don't like this at all ..... !!!!
 
         if (place instanceof AccountCreatorPlace) {
-            return new AccountCreatorPresenterImpl(accountCreatorWorkflow, accountContext);
+            return new AccountCreatorPresenterImpl(accountCreatorWorkflow, factory);
         }
         if (place instanceof HomePlace) {
             return new HomePresenter(homeView);

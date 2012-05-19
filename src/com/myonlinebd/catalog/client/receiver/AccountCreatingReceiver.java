@@ -21,7 +21,7 @@ public class AccountCreatingReceiver extends Receiver<Void> {
   @Override
   public void onSuccess(Void response) {
     view.enableSubmitButton();
-    view.gotToSunccessPage();
+    view.gotToSuccessPage();
   }
 
   @Override

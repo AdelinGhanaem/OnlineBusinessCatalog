@@ -17,13 +17,20 @@ public class AccountCreatorPresenterImpl extends AbstractActivity implements Acc
 
     private AccountCreatorView view;
     private BusinessCardsRequestFactory.AccountContext accountRequestContext;
-
+    private BusinessCardsRequestFactory factory;
+//    private
 
     @Inject
     public AccountCreatorPresenterImpl(AccountCreatorView view, BusinessCardsRequestFactory.AccountContext accountContext) {
         this.view = view;
         this.accountRequestContext = accountContext;
     }
+
+    public AccountCreatorPresenterImpl(AccountCreatorView accountCreatorWorkflow, BusinessCardsRequestFactory factory) {
+        view = accountCreatorWorkflow;
+        this.factory = factory;
+    }
+
 
     @Override
     public void createAccount(BusinessCardsRequestFactory.AccountContext context) {
@@ -38,6 +45,7 @@ public class AccountCreatorPresenterImpl extends AbstractActivity implements Acc
 
     @Override
     public AccountProxy getAccountProxy() {
+
         AccountProxy proxy = accountRequestContext.create(AccountProxy.class);
         AddressProxy addressProxy = accountRequestContext.create(AddressProxy.class);
         CompanyProxy companyProxy = accountRequestContext.create(CompanyProxy.class);
@@ -59,6 +67,7 @@ public class AccountCreatorPresenterImpl extends AbstractActivity implements Acc
 
     @Override
     public void start(AcceptsOneWidget panel, EventBus eventBus) {
+        accountRequestContext = factory.accountContext();
         view.setPresenter(this);
         panel.setWidget(view.asWidget());
     }

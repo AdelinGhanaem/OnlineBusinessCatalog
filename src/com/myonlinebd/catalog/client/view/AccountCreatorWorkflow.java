@@ -6,11 +6,8 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
 import com.myonlinebd.catalog.client.place.AccountSuccessfullyCreatedPlace;
@@ -68,44 +65,13 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     PlaceController placeController;
 
     @Inject
-    public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory, PlaceController controller) {
-        //TODO:ALLOOOO DI .... !! kakvo pravim ?
-        header = new HeaderView(controller);
+    public AccountCreatorWorkflow(BusinessCardsRequestFactory requestFactory, PlaceController controller, HeaderView headerView) {
+
+        header = headerView;
         placeController = controller;
-//    presenter = accountCreatorPresenter;
-
         initWidget(binder.createAndBindUi(this));
-
         driver = GWT.create(Driver.class);
-        //initialize the drive with factory and account editor
         driver.initialize(requestFactory, accountEditor);
-//
-//        //--!!--save the proxy on the server
-//
-////    context = requestFactory.accountContext();
-//        context = presenter.getAccountContext();
-//
-//        //--!!--create the proxy
-////    proxy = context.create(AccountProxy.class);
-//
-//        proxy = presenter.getAccountProxy();
-//        //--!!--
-////    proxy.setAddress(context.create(AddressProxy.class));
-//
-//        //--!!-- Call in some of the presenter methods !!
-////    context.create(proxy).to(new Receiver<Void>() {
-////      @Override
-////      public void onSuccess(Void aVoid) {
-////        Window.alert("So far so good !");
-////      }
-////    });
-//        presenter.willCreate(proxy, new AccountCreatingReceiver(this));
-//
-//        //return a mutable proxy
-//        proxy = context.edit(proxy);
-//
-//        //start drive the editor
-//        driver.edit(proxy, context);
     }
 
 
@@ -127,8 +93,14 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
         context = presenter.getAccountContext();
         proxy = presenter.getAccountProxy();
         presenter.willCreate(proxy, new AccountCreatingReceiver(this));
-        proxy = context.edit(proxy);
-        driver.edit(proxy, context);
+        if (context == null) {
+            Window.alert("no good ! ");
+
+        }else{
+            proxy = context.edit(proxy);
+            driver.edit(proxy, context);
+        }
+
 
     }
 
@@ -149,7 +121,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     }
 
     @Override
-    public void gotToSunccessPage() {
+    public void gotToSuccessPage() {
 
         placeController.goTo(new AccountSuccessfullyCreatedPlace());
     }

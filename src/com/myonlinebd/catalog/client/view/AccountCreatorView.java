@@ -18,7 +18,7 @@ public interface AccountCreatorView {
 
   void enableSubmitButton();
 
-  void gotToSunccessPage();
+  void gotToSuccessPage();
 
   void gotToFailurePage();
 

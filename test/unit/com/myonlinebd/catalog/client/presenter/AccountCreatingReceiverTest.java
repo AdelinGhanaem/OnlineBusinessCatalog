@@ -26,7 +26,7 @@ public class AccountCreatingReceiverTest {
   public void shouldEnableCreateButtonAndGoToAccountSuccessfullyCreatedPage() {
     context.checking(new Expectations() {{
       oneOf(workflow).enableSubmitButton();
-      oneOf(workflow).gotToSunccessPage();
+      oneOf(workflow).gotToSuccessPage();
     }});
     receiver.onSuccess(null);
   }
