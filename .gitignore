@@ -1,13 +1,8 @@
 
-out/*
 out/
 *.class
-.idea/*
 .idea/
 *.war
 *.ear
-src/com/myonlinebd/catalog/jre/
-onlineBusinessDirectory.iml
-war/Catalog/
 
 
