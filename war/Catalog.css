@@ -1,0 +1,54 @@
+/** Add css rules here for your application. */
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+body, td, a, div, .p {
+    font-family: arial, sans-serif
+}
+
+/*-----Main Wrapper -----*/
+#mainwrapper {
+    width: 100%;
+    margin: auto;
+}
+
+/*-----HEADER-----*/
+
+#header {
+    height: 200px;
+    padding: 2px;
+}
+
+#logo {
+    height: 190px;
+}
+
+#main_bar {
+
+    height: 72px;
+    background-image: url('resources/img/bar_bg.png');
+}
+
+.cleaner {
+
+    clear: both;
+}
+
+#left {
+    float: left;
+    width: 20%;
+    height: auto;
+}
+
+#right {
+    padding: 5px 5px;
+    float: right;
+    width: 80%;
+    height: auto;
+}
+
+

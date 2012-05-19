@@ -1,0 +1,13 @@
+1-
+[Answered]
+Q: I have an Receiver which onSuccess(... ) have to go to a new Place ... but PlaceController is Not an Interface ... ! and it is hard to MOCK !
+so how can i test my onSuccess(.. ) method ??
+
+My Answer: i created an interface called my controller so that i can test my presenter i guess this is where the test
+led me,moreover in the future i may want to change the implementation of my place controller this one was a good shout !
+Miros Answer: according to what i understood just put the PlaceController in the View  ... !
+
+2- There is a lot of things done in the AccountCreatorWorkflow and when implementing MVP, Where to start testing ???
+
+
+

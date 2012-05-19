@@ -159,6 +159,7 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
         placeController.goTo(new FailurePagePlace());
     }
 
+<<<<<<< HEAD
   @Override
   public void clearNotificationMessage() {
     errorMessages.setText("");
@@ -192,5 +193,11 @@ public class AccountCreatorWorkflow extends Composite implements AccountCreatorV
     errorMessages.setText("");
   }
 
+=======
+    @Override
+    public void clearNotificationMessage() {
+        errorMessages.setText("");
+    }
+>>>>>>> resolving conflicts
 }
 

@@ -1,0 +1,19 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:myWidget='urn:import:com.myonlinebd.catalog.client.view'>
+
+
+    <ui:style src="resources/css/main.css"/>
+
+  <g:HTMLPanel>
+        <div class="mainContainer">
+            <div class="{style.head}">
+                <div class="{style.logo}">
+                </div>
+                <div class="{style.navigation}">
+                    <myWidget:NavigationMenu ui:field="navMenu"/>
+                </div>
+            </div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>
