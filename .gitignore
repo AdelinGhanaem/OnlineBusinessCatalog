@@ -7,7 +7,7 @@ out/
 *.war
 *.ear
 src/com/myonlinebd/catalog/jre/
-onlineBD.iml
+onlineBusinessDirectory.iml
 war/Catalog/
 
 
