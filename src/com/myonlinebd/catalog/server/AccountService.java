@@ -9,9 +9,6 @@ import com.myonlinebd.catalog.server.domain.Account;
 
 public interface AccountService {
 
-
-
-
   public void create(Account account);
 
 }

@@ -1,8 +1,8 @@
 package com.myonlinebd.catalog.client.presenter;
 
 import com.google.web.bindery.requestfactory.shared.ServerFailure;
-import com.myonlinebd.catalog.client.receiver.AccountCreatingReceiver;
-import com.myonlinebd.catalog.client.view.AccountCreatorView;
+import com.myonlinebd.catalog.client.accountcreation.AccountCreatingReceiver;
+import com.myonlinebd.catalog.client.accountcreation.AccountCreatorWorkflowView;
 import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.jmock.integration.junit4.JMock;
@@ -19,7 +19,7 @@ import java.util.HashSet;
 public class AccountCreatingReceiverTest {
 
   Mockery context = new Mockery();
-  AccountCreatorView workflow = context.mock(AccountCreatorView.class);
+  AccountCreatorWorkflowView workflow = context.mock(AccountCreatorWorkflowView.class);
   AccountCreatingReceiver receiver = new AccountCreatingReceiver(workflow);
 
   @Test

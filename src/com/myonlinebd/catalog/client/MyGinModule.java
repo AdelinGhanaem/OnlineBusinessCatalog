@@ -7,37 +7,35 @@ import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
-import com.myonlinebd.catalog.client.presenter.AppActivityMapper;
-import com.myonlinebd.catalog.client.requestfactory.BusinessCardsRequestFactory;
-import com.myonlinebd.catalog.client.view.AccountCreatorView;
-import com.myonlinebd.catalog.client.view.AccountCreatorWorkflow;
+import com.myonlinebd.catalog.client.accountcreation.AccountCreatorWorkflowView;
+import com.myonlinebd.catalog.client.comunication.BusinessCardsRequestFactory;
+import com.myonlinebd.catalog.client.comunication.BusinessCardsRequestFactoryProvider;
+import com.myonlinebd.catalog.client.navigation.AppActivityMapper;
+import com.myonlinebd.catalog.client.navigation.InjectablePlaceController;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
 public class MyGinModule extends AbstractGinModule {
-    @Override
-    protected void configure() {
+  @Override
+  protected void configure() {
 
-        bind(AccountCreatorView.class).to(AccountCreatorWorkflow.class);
+    bind(AccountCreatorWorkflowView.class).to(AccountCreatorWorkflowView.class);
 
-//        bind(AccountCreatorPresenter.class).to(AccountCreatorPresenterImpl.class);
+    bind(ActivityMapper.class).to(AppActivityMapper.class);
 
-        bind(ActivityMapper.class).to(AppActivityMapper.class);
+    bind(EventBus.class).to(SimpleEventBus.class).in(Singleton.class);
 
-        bind(EventBus.class).to(SimpleEventBus.class).in(Singleton.class);
+    bind(BusinessCardsRequestFactory.class).toProvider(BusinessCardsRequestFactoryProvider.class);
 
-        bind(BusinessCardsRequestFactory.class).toProvider(BusinessCardsRequestFactoryProvider.class);
-
-        bind(PlaceController.class).to(InjectablePlaceController.class);
+    bind(PlaceController.class).to(InjectablePlaceController.class);
 
 
-    }
+  }
 
-    @Provides
-//    @Singleton
-    BusinessCardsRequestFactory.AccountContext getAccountContext(BusinessCardsRequestFactory factory) {
-        return factory.accountContext();
-    }
-
+  @Provides
+  BusinessCardsRequestFactory.AccountContext getAccountContext(BusinessCardsRequestFactory factory) {
+    BusinessCardsRequestFactory.AccountContext context = factory.accountContext();
+    return context;
+  }
 }

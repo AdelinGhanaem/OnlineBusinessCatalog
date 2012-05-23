@@ -8,8 +8,9 @@ import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.SimpleLayoutPanel;
 import com.google.web.bindery.event.shared.EventBus;
-import com.myonlinebd.catalog.client.place.HomePlace;
-import com.myonlinebd.catalog.client.presenter.AppActivityMapper;
+import com.myonlinebd.catalog.client.navigation.AppActivityMapper;
+import com.myonlinebd.catalog.client.navigation.ApplicationPlaceHistoryMapper;
+import com.myonlinebd.catalog.client.navigation.places.HomePlace;
 import com.myonlinebd.catalog.client.view.HeaderView;
 
 /**

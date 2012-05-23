@@ -9,8 +9,8 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.MenuItem;
 import com.google.inject.Inject;
-import com.myonlinebd.catalog.client.place.AccountCreatorPlace;
-import com.myonlinebd.catalog.client.place.HomePlace;
+import com.myonlinebd.catalog.client.navigation.places.AccountCreatorPlace;
+import com.myonlinebd.catalog.client.navigation.places.HomePlace;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
@@ -20,6 +20,7 @@ public class NavigationMenu extends Composite {
   }
 
   private static NavigationMenuUiBinder ourUiBinder = GWT.create(NavigationMenuUiBinder.class);
+
   @UiField
   MenuItem search;
   @UiField
@@ -28,8 +29,14 @@ public class NavigationMenu extends Composite {
   MenuItem aboutUs;
   @UiField
   MenuItem home;
-
+//
+//
+//
   private PlaceController placeController;
+//  @UiField
+//  Button home;
+//  @UiField
+//  Button newAccount;
 
   @Inject
   public NavigationMenu(PlaceController controller) {
@@ -38,7 +45,6 @@ public class NavigationMenu extends Composite {
     initWidget(rootElement);
     initMenu();
   }
-
 
   private void initMenu() {
 
@@ -70,6 +76,8 @@ public class NavigationMenu extends Composite {
         placeController.goTo(new HomePlace());
       }
     });
+
+
   }
 
 

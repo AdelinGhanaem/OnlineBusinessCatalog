@@ -11,9 +11,6 @@ public class MyServicesLocator implements ServiceLocator {
 
   @Override
   public Object getInstance(Class<?> clazz) {
-
     return service;
-
-
   }
 }
