@@ -3,11 +3,7 @@
 <module rename-to="Catalog">
 
   <!-- Inherit the core Web Toolkit stuff.                  -->
-<<<<<<< HEAD
 
-
-=======
->>>>>>> resolving conflicts
   <inherits name='com.google.gwt.user.User'/>
 
   <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
@@ -27,6 +23,8 @@
   <inherits name="com.google.gwt.activity.Activity"/>
 
  <inherits name="com.google.gwt.inject.Inject"/>
+
+  <source path="com.myonlinebd.catalog.client.resources"/>
 
   <!-- Specify the app entry point class.                   -->
   <entry-point class='com.myonlinebd.catalog.client.Catalog'/>

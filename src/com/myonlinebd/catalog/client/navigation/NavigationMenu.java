@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.client.view;
+package com.myonlinebd.catalog.client.navigation;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.place.shared.PlaceController;
@@ -16,8 +16,10 @@ import com.myonlinebd.catalog.client.navigation.places.HomePlace;
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com
  */
 public class NavigationMenu extends Composite {
+
   interface NavigationMenuUiBinder extends UiBinder<HTMLPanel, NavigationMenu> {
   }
+
 
   private static NavigationMenuUiBinder ourUiBinder = GWT.create(NavigationMenuUiBinder.class);
 
@@ -29,14 +31,8 @@ public class NavigationMenu extends Composite {
   MenuItem aboutUs;
   @UiField
   MenuItem home;
-//
-//
-//
+
   private PlaceController placeController;
-//  @UiField
-//  Button home;
-//  @UiField
-//  Button newAccount;
 
   @Inject
   public NavigationMenu(PlaceController controller) {

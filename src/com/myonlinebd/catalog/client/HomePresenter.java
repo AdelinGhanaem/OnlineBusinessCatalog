@@ -4,7 +4,6 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.myonlinebd.catalog.client.navigation.AbstractActivity;
-import com.myonlinebd.catalog.client.view.HomeView;
 
 /**
  * @author Adelin Ghanayem adelin.ghanaem@clouway.com

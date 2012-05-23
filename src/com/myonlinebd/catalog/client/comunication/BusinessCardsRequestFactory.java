@@ -14,26 +14,10 @@ import com.myonlinebd.catalog.shared.entities.AccountProxy;
 public interface BusinessCardsRequestFactory extends RequestFactory {
 
   @Service(value = AccountService.class, locator = MyServicesLocator.class)
-<<<<<<< HEAD
-
   public interface AccountContext extends RequestContext {
     public Request<Void> create(AccountProxy accountProxy);
-
-=======
-  public interface AccountContext extends RequestContext {
-
-    public Request<Void> create(AccountProxy accountProxy);
->>>>>>> resolving conflicts
-
   }
 
   AccountContext accountContext();
 
-<<<<<<< HEAD
 }
-
-
-=======
-
-}
->>>>>>> resolving conflicts

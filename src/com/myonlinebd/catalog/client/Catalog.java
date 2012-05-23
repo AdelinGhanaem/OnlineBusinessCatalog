@@ -11,7 +11,7 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.myonlinebd.catalog.client.navigation.AppActivityMapper;
 import com.myonlinebd.catalog.client.navigation.ApplicationPlaceHistoryMapper;
 import com.myonlinebd.catalog.client.navigation.places.HomePlace;
-import com.myonlinebd.catalog.client.view.HeaderView;
+import com.myonlinebd.catalog.client.navigation.HeaderView;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>
@@ -29,7 +29,7 @@ public class Catalog implements EntryPoint {
 
     PlaceController placeController = injector.placeController();
 
-    EventBus eventBus = injector.getEventBus();
+    EventBus eventBus = injector.eventBus();
 
     AppActivityMapper activityMapper = injector.activityMapper();
 
@@ -41,9 +41,9 @@ public class Catalog implements EntryPoint {
 
     PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(placeHistoryMapper);
 
-    historyHandler.register(placeController, eventBus,new HomePlace());
+    historyHandler.register(placeController, eventBus, new HomePlace());
 
-    HeaderView appView = new HeaderView(placeController);
+    HeaderView appView = injector.headerView();
 
     panel.add(appView);
 

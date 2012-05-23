@@ -1,7 +1,7 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
-             xmlns:myWidget='urn:import:com.myonlinebd.catalog.client.workflowView'>
-    <ui:style src="resources/css/headerstyle.css"/>
+             xmlns:myWidget='urn:import:com.myonlinebd.catalog.client.navigation'>
+    <ui:style src="../resources/css/headerstyle.css"/>
   <g:HTMLPanel>
         <div class="mainContainer">
             <div class="{style.head}">

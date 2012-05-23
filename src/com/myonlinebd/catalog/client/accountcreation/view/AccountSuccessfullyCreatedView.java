@@ -6,7 +6,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.inject.Inject;
-import com.myonlinebd.catalog.client.view.HeaderView;
+import com.myonlinebd.catalog.client.navigation.HeaderView;
 
 /**
  * author webmaster1803@gmail.com

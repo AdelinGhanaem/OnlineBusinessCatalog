@@ -2,9 +2,9 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
 
 
-  <ui:style src="resources/css/headerstyle.css"/>
+  <ui:style src="../resources/css/headerstyle.css"/>
 
-  <ui:with field="images" type="com.myonlinebd.catalog.client.workflowView.resources.ImagesResources"/>
+  <!--<ui:with field="images" type="com.myonlinebd.catalog.client.resources.ImagesResources"/>-->
 
   <g:HTMLPanel addStyleNames="{style.MenuBarContainerPanel}">
 
@@ -29,7 +29,7 @@
 
       </g:MenuItem>
 
-      <g:MenuItem ui:field="newAccount" addStyleNames="{style.MenuItem}"  >
+      <g:MenuItem ui:field="newAccount" addStyleNames="{style.MenuItem}" >
 
         New Account
       </g:MenuItem>

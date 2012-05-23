@@ -1,15 +1,15 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
-    xmlns:myWidgect='urn:import:com.myonlinebd.catalog.client.workflowView'
+    xmlns:myWidgect='urn:import:com.myonlinebd.catalog.client.navigation'
     >
-    <ui:with field='style' type='com.myonlinebd.catalog.client.workflowView.resources.ImagesResources'/>
+    <ui:with field='img' type='com.myonlinebd.catalog.client.resources.ImagesResources'/>
 
     <g:HTMLPanel>
         <myWidgect:HeaderView ui:field="header"/>
 
         <g:HTMLPanel>
             <div>
-                <g:Image resource="{style.fail}"/>
+                <g:Image resource="{img.fail}"/>
             </div>
             <div>
                 Възникна грешка по време на изпълнението на вашата заявка, нашият екип е уведомен за проблема.

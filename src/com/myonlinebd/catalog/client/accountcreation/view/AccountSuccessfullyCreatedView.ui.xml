@@ -1,9 +1,9 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
-             xmlns:myWidgect='urn:import:com.myonlinebd.catalog.client.workflowView'>
+             xmlns:myWidgect='urn:import:com.myonlinebd.catalog.client.navigation'>
 
 
-    <ui:with field='style' type='com.myonlinebd.catalog.client.workflowView.resources.ImagesResources'/>
+    <ui:with field='style' type='com.myonlinebd.catalog.client.resources.ImagesResources'/>
 
     <g:HTMLPanel>
         <myWidgect:HeaderView ui:field="header">

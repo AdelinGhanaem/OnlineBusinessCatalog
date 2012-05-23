@@ -8,6 +8,7 @@ import com.google.inject.Singleton;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 import com.myonlinebd.catalog.client.accountcreation.AccountCreatorWorkflowView;
+import com.myonlinebd.catalog.client.accountcreation.AccountCreatorWorkflowViewImpl;
 import com.myonlinebd.catalog.client.comunication.BusinessCardsRequestFactory;
 import com.myonlinebd.catalog.client.comunication.BusinessCardsRequestFactoryProvider;
 import com.myonlinebd.catalog.client.navigation.AppActivityMapper;
@@ -20,7 +21,7 @@ public class MyGinModule extends AbstractGinModule {
   @Override
   protected void configure() {
 
-    bind(AccountCreatorWorkflowView.class).to(AccountCreatorWorkflowView.class);
+    bind(AccountCreatorWorkflowView.class).to(AccountCreatorWorkflowViewImpl.class);
 
     bind(ActivityMapper.class).to(AppActivityMapper.class);
 

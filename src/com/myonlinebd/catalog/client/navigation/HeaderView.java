@@ -1,4 +1,4 @@
-package com.myonlinebd.catalog.client.view;
+package com.myonlinebd.catalog.client.navigation;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.place.shared.PlaceController;
@@ -22,11 +22,11 @@ public class HeaderView extends Composite {
   private static MainAppViewUiBinder ourUiBinder = GWT.create(MainAppViewUiBinder.class);
 
   @UiField(provided = true)
-  NavigationMenu navMenu;
+  NavigationMenu navMenu ;
 
   @Inject
-  public HeaderView(PlaceController controller) {
-    navMenu = new NavigationMenu(controller);
+  public HeaderView(PlaceController controller, NavigationMenu navigationMenu) {
+    navMenu = navigationMenu;
     HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
     initWidget(rootElement);
   }
